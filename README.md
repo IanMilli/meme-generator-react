@@ -1,4 +1,5 @@
 # meme-generator-react
+
 ## Table of contents
 
 - [Overview](#overview)
@@ -91,7 +92,9 @@ Use this section to outline areas that you want to continue focusing on in futur
 **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
-  Your Name
+  Ian Logendra
+  Emmanouil Giavasis
+  Ian Millichamp
 - Website - [your name or website url](https://www.your-site.com)
 - GitHub - [your GitHub username](https://github.com/yourusername)
 
@@ -102,3 +105,5 @@ Use this section to outline areas that you want to continue focusing on in futur
 This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
 
 **Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+=======
+
