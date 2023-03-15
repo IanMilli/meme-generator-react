@@ -1,0 +1,31 @@
+/*suggested pallette colors to match wireframe mvp -#e3c567, #c8963e, #573d1c, #d9ae61, #d1462f */
+/*suggested font pairings for application are Font-Family: 'Cormorant Garamond', Serif;
+Font-Size: 55px;
+Font-Family: 'Fira Sans', Sans-Serif;
+Font-Size: 15px;*/
+
+/*styling for h1 (use vw unit to overide default size and make font screen responsive)*/
+h1{
+  font-size: 4vw;
+  color:#573d1c;
+  font-family: 'Cormorant Garamond', Serif;
+}
+h2{
+  font-size: 2vw;
+  color: black;
+  font-family: 'Fira Sans', Sans-Serif;
+}
+
+
+/*styling for top app bar*/
+.topAppBar{
+  text-align: center;
+  padding:3vh;
+  background-color:#e3c567 ;
+}
+/*styling for bottom app bar*/
+.bottomAppBar{
+  text-align: center;
+  padding:3vh;
+  background-color:#e3c567 ;
+}
