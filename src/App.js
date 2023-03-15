@@ -44,10 +44,9 @@ class App extends Component {
 
         <Appbar className='topAppBar'><h1>Meme Generator</h1></Appbar>;
         <div style={{ height: '30vw' }}>
-          mui-text-box
-          <div>
-            <Textarea placeholder="Input 1" defaultValue="Top Text" />
-            <Textarea placeholder="Input 2" defaultValue="Bottom Text" />
+          <div style={{ display: 'flex' }}>
+             <Textarea placeholder="Input 1"  style={{ width: '30vw', marginRight: '550px', marginLeft: '50px' }} defaultValue="Top Text" />
+            <Textarea placeholder="Input 2"  style={{ width: '30vw' }} defaultValue="Bottom Text" />
           </div>
           <div>
             <Button color="primary">Generate meme</Button>
