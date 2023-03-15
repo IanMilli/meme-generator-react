@@ -1,12 +1,23 @@
 
-import './App.css';
-import React from 'react';
+
+import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import Appbar from 'muicss/lib/react/appbar';
+import './App.css';
 
-function App() {
+/**changed app.js from a functional component to make a class component */
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      photos:[]
+    };
+  }
+
+  componentDidMount() {}
+  render(){
   return (
-    <div >
+    <div>
    
 
  <Appbar className='topAppBar'><h1>Meme Generator</h1></Appbar>;
@@ -19,5 +30,5 @@ function App() {
 </div>
   );
 }
-
+}
 export default App;
