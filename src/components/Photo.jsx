@@ -1,11 +1,12 @@
 import React from "react";
 
+
 const Photo = (props) => {
 
     return(
 
-        <div>
-            <img src={props.url} alt="doggo photo"/>
+        <div >
+            <img style={{maxHeight:'200px'}}src={props.url} alt="doggo photo"/>
         </div>
     )
 }

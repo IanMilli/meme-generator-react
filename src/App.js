@@ -44,7 +44,7 @@ class App extends Component {
 
           <div className="photoContainer">
             <h2>some pics be here </h2>
-            <PhotoContainer photos={this.state.photos}/>
+            <PhotoContainer  photos={this.state.photos}/>
         </div>
         </div>
           <Appbar className='bottomAppBar'><a style={{ color: 'white' }} href="https://github.com/IanMilli/meme-generator-react">© 2023 Copyright: Manolis Giavasis, Ian Logendra & Ian
