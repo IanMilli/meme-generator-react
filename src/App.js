@@ -9,10 +9,14 @@ function App() {
     <div >
    
 
- <Appbar className='appBar'><h1>Meme Generator</h1></Appbar>;
+ <Appbar className='topAppBar'><h1>Meme Generator</h1></Appbar>;
+
+<div style={{height:'30vw'}}>
+
 </div>
-
-
+<Appbar className='bottomAppBar'><a style={{color:'white'}} href="https://github.com/IanMilli/meme-generator-react">© 2023 Copyright: Manolis Giavasis, Ian Logendra & Ian
+        Millichamp</a></Appbar>
+</div>
   );
 }
 
