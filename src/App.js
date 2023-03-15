@@ -3,6 +3,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import Appbar from 'muicss/lib/react/appbar';
+import Textarea from 'muicss/lib/react/textarea';
 import PhotoContainer from "./components/PhotoContainer.jsx";
 import Photo from "./components/Photo";
 import '../src/App.css';
@@ -41,16 +42,20 @@ class App extends Component {
 
         <Appbar className='topAppBar'><h1>Meme Generator</h1></Appbar>;
         <div style={{ height: '30vw' }}>
-
+        <div>
+            <Textarea placeholder="Input 1" defaultValue="Top Text" />
+            <Textarea placeholder="Input 2" defaultValue="Bottom Text" />
+          </div>
           <div className="photoContainer">
             <h2>some pics be here </h2>
-            <PhotoContainer  photos={this.state.photos}/>
+            <PhotoContainer photos={this.state.photos} />
+          </div>
+
         </div>
-        </div>
-          <Appbar className='bottomAppBar'><a style={{ color: 'white' }} href="https://github.com/IanMilli/meme-generator-react">© 2023 Copyright: Manolis Giavasis, Ian Logendra & Ian
-            Millichamp</a></Appbar>
-        </div>
-        );
+        <Appbar className='bottomAppBar'><a style={{ color: 'white' }} href="https://github.com/IanMilli/meme-generator-react">© 2023 Copyright: Manolis Giavasis, Ian Logendra & Ian
+          Millichamp</a></Appbar>
+      </div>
+    );
+  }
 }
-}
-        export default App;
+export default App;
