@@ -3,7 +3,7 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 import Appbar from 'muicss/lib/react/appbar';
-import './App.css';
+import '../src/App.css';
 
 /**changed app.js from a functional component to make a class component */
 class App extends Component {
@@ -20,10 +20,16 @@ fetch("https://api.thedogapi.com/v1/images/search?limit=20")
   console.log('response',response);
   if (!response.ok) {throw Error("error fetching dog pics");
 }
-return response.json();
+return response.json()
+.then(allData => {
+  this.setState({photos:allData});
+})
+.catch(err => {
+  throw Error(err.message);
+})
 })
 
-  }
+ }
   render(){
   return (
     <div>
