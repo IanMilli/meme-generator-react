@@ -24,6 +24,7 @@ return response.json()
 .then(allData => {
   this.setState({photos:allData});
 })
+/**this is added so if something in the method goes wrong it will throw an error explaining the error */
 .catch(err => {
   throw Error(err.message);
 })
@@ -36,8 +37,14 @@ return response.json()
    
 
  <Appbar className='topAppBar'><h1>Meme Generator</h1></Appbar>;
-
 <div style={{height:'30vw'}}>
+
+
+
+
+
+
+
 
 </div>
 <Appbar className='bottomAppBar'><a style={{color:'white'}} href="https://github.com/IanMilli/meme-generator-react">© 2023 Copyright: Manolis Giavasis, Ian Logendra & Ian
