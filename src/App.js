@@ -14,7 +14,16 @@ class App extends Component {
     };
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+fetch("https://api.thedogapi.com/v1/images/search?limit=20")
+.then(response => {
+  console.log('response',response);
+  if (!response.ok) {throw Error("error fetching dog pics");
+}
+return response.json();
+})
+
+  }
   render(){
   return (
     <div>
