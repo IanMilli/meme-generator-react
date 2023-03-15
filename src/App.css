@@ -1,0 +1,16 @@
+/*suggested pallette colors to match wireframe mvp -#e3c567, #c8963e, #573d1c, #d9ae61, #d1462f */
+
+/*styling for h1 (use vw unit to make font screen responsive)*/
+h1{
+  font-size: 4vw;
+  color:#d1462f;
+  font-family: ;
+}
+
+
+/*styling for app bar*/
+.appBar{
+  text-align: center;
+  padding:3vh;
+  background-color:#e3c567 ;
+}

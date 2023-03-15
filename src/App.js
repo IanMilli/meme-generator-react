@@ -9,7 +9,7 @@ function App() {
     <div >
    
 
- <Appbar></Appbar>;
+ <Appbar className='appBar'><h1>Meme Generator</h1></Appbar>;
 </div>
 
 
