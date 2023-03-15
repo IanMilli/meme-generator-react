@@ -11,7 +11,7 @@ const PhotoContainer = props => {
 };
 
 return (
-    <div>{displayPhotos()}</div>
+    <div ClassName="photoBox">{displayPhotos()}</div>
 );
 };
 
