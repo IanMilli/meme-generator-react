@@ -31,8 +31,10 @@ function ImagePick({ images }) {
                 ))}
 
             </Row>
-            <Appbar className='topAppBar'><h1>Meme Generator</h1></Appbar>
             <Panel className="mui--z5 panel">
+            <Appbar className='topAppBar'><h1>Meme Generator</h1></Appbar>
+            </Panel>
+            <Panel className="mui--z5 panel3">
                
                 <Col className="mui--align-middle">
                     {selectedImage && <img src={selectedImage} alt="Selected" className="bigPic mui--align-middle mui--z3" />}
