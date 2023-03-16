@@ -37,7 +37,9 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Panel className="mui--z5 panel">
         <Appbar className='topAppBar'><h1>Image Search</h1></Appbar>
+        </Panel>
         <div>
           <div>
             <Panel>
@@ -56,8 +58,10 @@ class App extends Component {
 
           </section>
         </div>
-        <Appbar className='bottomAppBar'><a style={{ color: 'white' }} href="https://github.com/IanMilli/meme-generator-react">© 2023 Copyright: Manolis Giavasis, Ian Logendra & Ian
+        <Panel className="mui--z5 panel4">
+        <Appbar className='bottomAppBar'><a style={{ color: '#DA7422' }} href="https://github.com/IanMilli/meme-generator-react">© 2023 Copyright: Manolis Giavasis, Ian Logendra & Ian
           Millichamp</a></Appbar>
+          </Panel>
       </div>
     );
   }
