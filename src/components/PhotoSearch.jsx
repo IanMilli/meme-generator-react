@@ -7,6 +7,8 @@ import Row from 'muicss/lib/react/row';
 import Form from 'muicss/lib/react/form';
 import Button from 'muicss/lib/react/button';
 import Input from 'muicss/lib/react/input';
+import ImagePick from "./ImagePick";
+
 
 function PhotoSearch() {
     const [search, setSearch] = useState("");
@@ -60,12 +62,13 @@ function PhotoSearch() {
                     <div className='"alignCards"'>
                         {result.map(search => (
                             <Col md='2' style={{marginLeft:'0'}}>
-                                <img src={search.src.small} alt={search.photographer} onClick={() => this.openImage() /* The onclick here determines current image */}/>
+                                {/* <img src={search.src.small} alt={search.photographer} /> */}
                                 <h5 >{search.photographer}</h5>
                                
                             </Col>
                         ))}
                     </div>
+                    <ImagePick images={result} />
                 </Row>
             </Container>
         </Form>
