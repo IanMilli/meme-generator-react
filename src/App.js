@@ -9,7 +9,7 @@ import PhotoContainer from "./components/PhotoContainer.jsx";
 import Photo from "./components/Photo";
 import '../src/App.css';
 import GalleryBar from './components/GalleryBar.jsx';
-
+import GooglePexel from "./components/googlepexel.jsx";  
 /**changed app.js from a functional component to make a class component */
 class App extends Component {
   constructor() {
@@ -46,6 +46,7 @@ class App extends Component {
         <div style={{ height: '30vw' }}>
           mui-text-box
           <div>
+          <GooglePexel></GooglePexel> 
             <Textarea placeholder="Input 1" defaultValue="Top Text" />
             <Textarea placeholder="Input 2" defaultValue="Bottom Text" />
           </div>
