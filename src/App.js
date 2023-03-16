@@ -7,7 +7,7 @@ import Textarea from 'muicss/lib/react/textarea';
 import Button from 'muicss/lib/react/button';
 import '../src/App.css';
 import GalleryBar from './components/GalleryBar.jsx';
-import GooglePexel from "./components/googlepexel.jsx";  
+import PhotoSearch from "./components/PhotoSearch.jsx";  
 /**changed app.js from a functional component to make a class component */
 class App extends Component {
   render() {
@@ -19,7 +19,7 @@ class App extends Component {
         <div style={{ height: '30vw' }}>
           mui-text-box
           <div>
-          <GooglePexel></GooglePexel> 
+          <PhotoSearch></PhotoSearch> 
             <Textarea placeholder="Input 1" defaultValue="Top Text" />
             <Textarea placeholder="Input 2" defaultValue="Bottom Text" />
           </div>
