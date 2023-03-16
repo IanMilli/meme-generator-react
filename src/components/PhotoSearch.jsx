@@ -8,7 +8,7 @@ import Form from 'muicss/lib/react/form';
 import Button from 'muicss/lib/react/button';
 import Input from 'muicss/lib/react/input';
 import ImagePick from "./ImagePick";
-
+import '../components/css/ImagePick.css';
 
 function PhotoSearch() {
     const [search, setSearch] = useState("");
@@ -41,18 +41,18 @@ function PhotoSearch() {
     return (
         <Form onSubmit={handleSubmit}>
             <div className="card-header main-search">
-                <h2>Search Here For An Image To Use In The Meme Generator</h2>
-                <Row>
+                <h2 className="imageSearch">Search Here For An Image To Use In The Meme Generator</h2>
+                <Row className="inputRow">
                     <Col md='3'>
-                        <Input onChange={handleChange} className="AutoFocus form-control" placeholder="Type something..." type="text" />
+                        <Input onChange={handleChange} className="AutoFocus form-control inputBox" placeholder="Type something..." type="text" />
                     </Col>
                     <Col md='3'>
-                        <Input onChange={noOfPics} name="deliveryNumber" className="AutoFocus form-control" placeholder="No of Images"
+                        <Input onChange={noOfPics} name="deliveryNumber" className="AutoFocus form-control inputBox" placeholder="No of Images"
                             type="text" />
                     </Col>
                     <Row>
                     <div >
-                        <Button variant="raised">Search For Image</Button>
+                        <Button variant="raised" className="searchBut">Search For Image</Button>
                     </div>
                     </Row>
                 </Row>
@@ -68,6 +68,7 @@ function PhotoSearch() {
                             </Col>
                         ))}
                     </div>
+                    <h1 className="scrollText">Click On Your Preferred Image And Scroll Down</h1>
                     <ImagePick images={result} />
                     
                 </Row>
