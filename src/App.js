@@ -7,7 +7,7 @@ import Textarea from 'muicss/lib/react/textarea';
 import Button from 'muicss/lib/react/button';
 import '../src/App.css';
 import GalleryBar from './components/GalleryBar.jsx';
-import PhotoSearch from "./components/PhotoSearch.jsx";  
+import PhotoSearch from "./components/PhotoSearch.jsx";
 import Panel from 'muicss/lib/react/panel';
 /**changed app.js from a functional component to make a class component */
 class App extends Component {
@@ -17,15 +17,13 @@ class App extends Component {
 
 
         <Appbar className='topAppBar'><h1>Meme Generator</h1></Appbar>;
-        <div >
-          
+        <div>
           <div>
-           
             <Panel>
-          <PhotoSearch></PhotoSearch> 
-          </Panel>
-          
-         
+              <PhotoSearch></PhotoSearch>
+            </Panel>
+
+
             <Textarea placeholder="Input 1" defaultValue="Top Text" />
             <Textarea placeholder="Input 2" defaultValue="Bottom Text" />
           </div>
@@ -39,7 +37,7 @@ class App extends Component {
           </section>
 
 
-        
+
 
         </div>
         <Appbar className='bottomAppBar'><a style={{ color: 'white' }} href="https://github.com/IanMilli/meme-generator-react">© 2023 Copyright: Manolis Giavasis, Ian Logendra & Ian
