@@ -60,7 +60,7 @@ function PhotoSearch() {
                     <div className='"alignCards"'>
                         {result.map(search => (
                             <Col md='2' style={{marginLeft:'0'}}>
-                                <img src={search.src.small} alt={search.photographer} onClick={() => this.openImage(index) /* The onclick here determines current image */}/>
+                                <img src={search.src.small} alt={search.photographer} onClick={() => this.openImage() /* The onclick here determines current image */}/>
                                 <h5 >{search.photographer}</h5>
                                
                             </Col>
