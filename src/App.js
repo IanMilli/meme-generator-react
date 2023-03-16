@@ -23,7 +23,7 @@ class App extends Component {
             <Panel>
               <PhotoSearch></PhotoSearch>
             </Panel>
-            <Appbar className='topAppBar'><h1>Meme Generator</h1></Appbar>;
+            
             <Textarea placeholder="Input 1" defaultValue="Top Text" />
             <Textarea placeholder="Input 2" defaultValue="Bottom Text" />
           </div>

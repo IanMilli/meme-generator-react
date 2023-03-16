@@ -61,14 +61,15 @@ function PhotoSearch() {
                 <Row>
                     <div className='"alignCards"'>
                         {result.map(search => (
-                            <Col md='2' style={{marginLeft:'0'}}>
+                            <Col >
                                 {/* <img src={search.src.small} alt={search.photographer} /> */}
-                                <h5 >{search.photographer}</h5>
+                               
                                
                             </Col>
                         ))}
                     </div>
                     <ImagePick images={result} />
+                    
                 </Row>
             </Container>
         </Form>
