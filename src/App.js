@@ -9,6 +9,7 @@ import GalleryBar from './components/GalleryBar.jsx';
 import PhotoSearch from "./components/PhotoSearch.jsx";
 import Panel from 'muicss/lib/react/panel';
 
+
 import ImagePick from './components/ImagePick';
 
 
@@ -20,9 +21,12 @@ class App extends Component {
 
 
 
+
         <Appbar className='topAppBar'><h1>Image Search</h1></Appbar>;
 
        
+
+
 
         <div>
           <div>
