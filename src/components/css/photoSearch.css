@@ -1,4 +1,15 @@
-.photoSearchImage {
-    max-width: 100px !important;
-    height: 100px !important;
-}
+.alignCards {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+  }
+  
+  .alignCards ul li {
+    list-style: none;
+    flex: 0 0 33.333333%;
+  }
+  .photoSearchCards {
+    width: 210px;
+    height: 240px;
+  }
+ 

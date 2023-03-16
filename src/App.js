@@ -8,6 +8,7 @@ import Button from 'muicss/lib/react/button';
 import '../src/App.css';
 import GalleryBar from './components/GalleryBar.jsx';
 import PhotoSearch from "./components/PhotoSearch.jsx";  
+import Panel from 'muicss/lib/react/panel';
 /**changed app.js from a functional component to make a class component */
 class App extends Component {
   render() {
@@ -16,10 +17,15 @@ class App extends Component {
 
 
         <Appbar className='topAppBar'><h1>Meme Generator</h1></Appbar>;
-        <div style={{ height: '30vw' }}>
-          mui-text-box
+        <div >
+          
           <div>
+           
+            <Panel>
           <PhotoSearch></PhotoSearch> 
+          </Panel>
+          
+         
             <Textarea placeholder="Input 1" defaultValue="Top Text" />
             <Textarea placeholder="Input 2" defaultValue="Bottom Text" />
           </div>

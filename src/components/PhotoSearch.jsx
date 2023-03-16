@@ -1,10 +1,12 @@
 
 import React, { useState } from "react";
 import axios from 'axios';
-import Panel from 'muicss/lib/react/panel';
 import Container from 'muicss/lib/react/container';
-import Row from 'muicss/lib/react/row';
 import Col from 'muicss/lib/react/col';
+import Row from 'muicss/lib/react/row';
+import Form from 'muicss/lib/react/form';
+import Button from 'muicss/lib/react/button';
+import Input from 'muicss/lib/react/input';
 
 function PhotoSearch() {
     const [search, setSearch] = useState("");
@@ -35,38 +37,38 @@ function PhotoSearch() {
 
     }
     return (
-        <form onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit}>
             <div className="card-header main-search">
-                <div className="row">
-                    <div className="col-12 col-md-3 col-xl-3">
-                        <input onChange={handleChange} className="AutoFocus form-control" placeholder="Type something..." type="text" />
-                    </div>
-                    <div className="col-12 col-md-3 col-xl-3">
-                        <input onChange={noOfPics} name="deliveryNumber" className="AutoFocus form-control" placeholder="No of Images"
+                <h2>Search Here For An Image To Use In The Meme Generator</h2>
+                <Row>
+                    <Col md='3'>
+                        <Input onChange={handleChange} className="AutoFocus form-control" placeholder="Type something..." type="text" />
+                    </Col>
+                    <Col md='3'>
+                        <Input onChange={noOfPics} name="deliveryNumber" className="AutoFocus form-control" placeholder="No of Images"
                             type="text" />
+                    </Col>
+                    <Row>
+                    <div >
+                        <Button variant="raised">Search For Image</Button>
                     </div>
-                    <div className="ml-auto">
-                        <input type="submit" value="Search" className="btn btn-primary search-btn" />
-                    </div>
-                </div>
+                    </Row>
+                </Row>
             </div>
             <Container fluid={true}>
                 <Row>
-                    {result.map(search => (
-
-
-                        <Col >
-                            <Panel >
-                                <img className="photoSearchImage" variant="top" src={search.src.tiny} alt={search.photographer} />
-                                <h5 className="card-title">Card title</h5>
-                                <a className="btn btn-primary">Know more</a>
-                            </Panel>
-                        </Col>
-
-                    ))}
+                    <div className='"alignCards"'>
+                        {result.map(search => (
+                            <Col md='2' style={{marginLeft:'0'}}>
+                                <img src={search.src.small} alt={search.photographer} onClick={() => this.openImage(index) /* The onclick here determines current image */}/>
+                                <h5 >{search.photographer}</h5>
+                               
+                            </Col>
+                        ))}
+                    </div>
                 </Row>
             </Container>
-        </form>
+        </Form>
 
 
     )
