@@ -1,8 +1,17 @@
-import React, { useState } from "react";
+
+import React, { useState } from 'react';
+import Textarea from 'muicss/lib/react/textarea';
+import Button from 'muicss/lib/react/button';
+
+
+function TextOverPhoto(props) {
+  const [topText, setText] = useState(props.topText || '');
+
 
 function TextOverPhoto(props) {
   const [topText, settopText] = useState(props.topText || "");
   const [bottomText, setbottomText] = useState(props.bottomText || "");
+
   const [image, setImage] = useState(props.photo || null);
 
   // This function will handle the user input for the text overlay
@@ -27,9 +36,18 @@ const copyMeme = (event) => {
 
   return (
     <div>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <Textarea label="Top meme text" onChange={handleTextChange} style={{ width: '30%' }} />
+        <Textarea label="Bottom meme text" onChange={handleTextChange} style={{ width: '30%' }} />
+      </div>
+      <div style={{ textAlign: 'center' }}>
+            <Button color="primary" >Generate meme</Button>
+          </div>
       <div>
+
         <input type="text" onChange={handleTopTextChange} />
         <input type="text" onChange={handleBottomTextChange} />
+
         <input type="file" accept="image/*" onChange={handleImageChange} />
       </div>
       <div className="meme" style={{ position: "relative" }}>
@@ -38,13 +56,14 @@ const copyMeme = (event) => {
             src={image}
             alt="Selected"
             style={{
-              display: "block",
-              marginLeft: "auto",
-              marginRight: "auto",
-              width: "50%",
 
-              maxWidth: "100%",
-              height: "auto",
+              display: 'block',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+              width: '50%',
+
+              maxWidth: '100%', height: 'auto'
+
             }}
           />
         )}
