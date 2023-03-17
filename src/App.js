@@ -48,7 +48,7 @@ class App extends Component {
           </div>
           {/* Using this to test TextOverPhoto */}
 
-        <TextOverPhoto></TextOverPhoto>
+          <TextOverPhoto topText="Top Text Goes Here" photo='https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?cs=srgb&dl=pexels-pixabay-45201.jpg&fm=jpg'/>
         </div>
        
         <Panel className="mui--z5 panel4">
