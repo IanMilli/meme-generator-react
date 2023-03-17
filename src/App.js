@@ -5,12 +5,12 @@ import Appbar from 'muicss/lib/react/appbar';
 import Textarea from 'muicss/lib/react/textarea';
 import Button from 'muicss/lib/react/button';
 import '../src/App.css';
-import GalleryBar from './components/GalleryBar.jsx';
 import PhotoSearch from "./components/PhotoSearch.jsx";
 import Panel from 'muicss/lib/react/panel';
+import TextOverPhoto from './components/TextOverPhoto';
 
 import ImagePick from './components/ImagePick';
-
+import Picture from './components/Picture';
 
 /**changed app.js from a functional component to make a class component */
 class App extends Component {
@@ -53,10 +53,11 @@ class App extends Component {
           <div style={{ textAlign: 'center' }}>
             <Button color="primary" >Generate meme</Button>
           </div>
-          {/* This section (not sure if section tags are needed) is where the 12 images (thumbnails) will display across the top below the navbar */}
-          <section>
-
-          </section>
+          {/* Using this to test TextOverPhoto */}
+          <div>
+          {/* <TextOverPhoto text="Hello World!" photo="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" /> */}
+          <Picture></Picture>
+          </div>
         </div>
         <Panel className="mui--z5 panel4">
         <Appbar className='bottomAppBar'><a style={{ color: '#DA7422' }} href="https://github.com/IanMilli/meme-generator-react">© 2023 Copyright: Manolis Giavasis, Ian Logendra & Ian
