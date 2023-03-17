@@ -25,7 +25,12 @@ function TextOverPhoto(props) {
           <img
             src={image}
             alt="Selected"
-            style={{ maxWidth: '100%', height: 'auto' }}
+            style={{      display: 'block',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            width: '50%',
+            
+             maxWidth: '100%', height: 'auto' }}
           />
         )}
         {text && (

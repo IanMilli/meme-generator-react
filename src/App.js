@@ -10,7 +10,7 @@ import Panel from 'muicss/lib/react/panel';
 import TextOverPhoto from './components/TextOverPhoto';
 
 import ImagePick from './components/ImagePick';
-import Picture from './components/Picture';
+
 
 /**changed app.js from a functional component to make a class component */
 class App extends Component {
@@ -56,7 +56,6 @@ class App extends Component {
           {/* Using this to test TextOverPhoto */}
           <div>
           <TextOverPhoto text="Hello World!" photo="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" />
-          <Picture></Picture>
           </div>
         </div>
         <Panel className="mui--z5 panel4">
