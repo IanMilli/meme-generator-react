@@ -55,7 +55,7 @@ class App extends Component {
           </div>
           {/* Using this to test TextOverPhoto */}
           <div>
-          {/* <TextOverPhoto text="Hello World!" photo="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" /> */}
+          <TextOverPhoto text="Hello World!" photo="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" />
           <Picture></Picture>
           </div>
         </div>
