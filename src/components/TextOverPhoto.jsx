@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function TextOverPhoto(props) {
-  const [text, setText] = useState(props.text ||'');
+  const [topText, setText] = useState(props.topText ||'');
   const [image, setImage] = useState(props.photo || null);
 
   // This function will handle the user input for the text overlay
@@ -33,11 +33,11 @@ function TextOverPhoto(props) {
              maxWidth: '100%', height: 'auto' }}
           />
         )}
-        {text && (
+        {topText && (
           <div
             style={{
               position: 'absolute',
-              top: '50%',
+              top: '10%',
               left: '50%',
               transform: 'translate(-50%, -50%)',
               color: 'white',
@@ -46,7 +46,7 @@ function TextOverPhoto(props) {
               textShadow: '2px 2px 4px rgba(0,0,0,0.8)',
             }}
           >
-            {text}
+            {topText}
           </div>
         )}
       </div>
