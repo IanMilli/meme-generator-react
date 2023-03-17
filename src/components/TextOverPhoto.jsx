@@ -4,8 +4,6 @@ import Textarea from 'muicss/lib/react/textarea';
 import Button from 'muicss/lib/react/button';
 
 
-function TextOverPhoto(props) {
-  const [topText, setText] = useState(props.topText || '');
 
 
 function TextOverPhoto(props) {
@@ -37,8 +35,8 @@ const copyMeme = (event) => {
   return (
     <div>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <Textarea label="Top meme text" onChange={handleTextChange} style={{ width: '30%' }} />
-        <Textarea label="Bottom meme text" onChange={handleTextChange} style={{ width: '30%' }} />
+        <Textarea label="Top meme text" onChange={handleTopTextChange} style={{ width: '30%' }} />
+        <Textarea label="Bottom meme text" onChange={handleBottomTextChange} style={{ width: '30%' }} />
       </div>
       <div style={{ textAlign: 'center' }}>
             <Button color="primary" >Generate meme</Button>
