@@ -20,6 +20,11 @@ function TextOverPhoto(props) {
     setImage(URL.createObjectURL(event.target.files[0]));
   };
 
+const copyMeme = (event) => {
+  console.log ("copyMeme")
+  
+}
+
   return (
     <div>
       <div>
@@ -27,7 +32,7 @@ function TextOverPhoto(props) {
         <input type="text" onChange={handleBottomTextChange} />
         <input type="file" accept="image/*" onChange={handleImageChange} />
       </div>
-      <div style={{ position: "relative" }}>
+      <div className="meme" style={{ position: "relative" }}>
         {image && (
           <img
             src={image}
@@ -77,6 +82,8 @@ function TextOverPhoto(props) {
           </div>
         )}
       </div>
+
+      <button onClick={copyMeme}>Copy Meme</button>
     </div>
   );
 }
