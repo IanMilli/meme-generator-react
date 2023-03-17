@@ -1,12 +1,11 @@
 
-import React, { Component } from 'react';
+import React, { Component,useRef  } from 'react';
 import ReactDOM from 'react-dom';
 import Appbar from 'muicss/lib/react/appbar';
 import '../src/App.css';
 import PhotoSearch from "./components/PhotoSearch.jsx";
 import Panel from 'muicss/lib/react/panel';
 import TextOverPhoto from './components/TextOverPhoto';
-import ImagePick from './components/ImagePick';
 
 
 /**changed app.js from a functional component to make a class component */
@@ -32,6 +31,7 @@ class App extends Component {
     this.setState({ bottomText: event.target.value });
   }
 
+   
   render() {
     return (
       <div>
@@ -48,12 +48,9 @@ class App extends Component {
           </div>
           {/* Using this to test TextOverPhoto */}
 
-          <div>
-
-            <TextOverPhoto topText="Top Text Goes Here" photo="https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" />
-
-          </div>
+        <TextOverPhoto></TextOverPhoto>
         </div>
+       
         <Panel className="mui--z5 panel4">
           <Appbar className='bottomAppBar'><a style={{ color: '#DA7422' }} href="https://github.com/IanMilli/meme-generator-react">© 2023 Copyright: Manolis Giavasis, Ian Logendra & Ian
             Millichamp</a></Appbar>

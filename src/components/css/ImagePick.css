@@ -23,7 +23,7 @@
 
 .bigPic{
  
-  border: solid black 1vh;
+  border: solid black 1vh !important;
   max-width: 100vh;
   padding: 3vh;
   margin:5vh;
@@ -55,6 +55,14 @@
 
 .searchBut{
   margin-left: 5vh;
+  background-color:#DA7422 ;
+  color: #FFFBDB;
+  border-radius: 50%;
+}
+.downloadBut{
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
   background-color:#DA7422 ;
   color: #FFFBDB;
   border-radius: 50%;

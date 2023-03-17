@@ -1,16 +1,34 @@
-import React, { useState } from "react";
+import React, { useState ,useRef} from "react";
+
+
+import * as htmlToImage from 'html-to-image';
 import Col from 'muicss/lib/react/col';
 import Row from 'muicss/lib/react/row';
+import Button from 'muicss/lib/react/button';
 import Appbar from 'muicss/lib/react/appbar';
 import Panel from 'muicss/lib/react/panel';
 import '../components/css/ImagePick.css';
+import TextOverPhoto from './TextOverPhoto';
+
 function ImagePick({ images }) {
     const [selectedImage, setSelectedImage] = useState(null);
 
     const handleImageClick = (imageSrc) => {
         setSelectedImage(imageSrc);
-    };
 
+    };
+        const domEl = useRef(null);
+
+  const downloadImage = async () => {
+    const dataUrl = await htmlToImage.toPng(domEl.current);
+
+    // download image
+    const link = document.createElement('a');
+    link.download = 'html-to-img.png';
+    link.href = dataUrl;
+    link.click();
+  };
+  
 
     return (
         <div>
@@ -37,7 +55,13 @@ function ImagePick({ images }) {
             <Panel className="mui--z5 panel3">
                
                 <Col className="mui--align-middle">
-                    {selectedImage && <img src={selectedImage} alt="Selected" className="bigPic mui--align-middle mui--z3" />}
+                <div id="domEl" ref={domEl}>
+                    {selectedImage && <img src={selectedImage} alt="Selected" className=" bigPic mui--align-middle mui--z3" />}
+                    
+                    
+                    </div>
+                    <Button variant="raised" className="downloadBut mui--align-middle" onClick={downloadImage}>Download Meme</Button>
+                   
                 </Col>
             </Panel>
         </div>
