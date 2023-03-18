@@ -1,8 +1,8 @@
 
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Textarea from 'muicss/lib/react/textarea';
 import Button from 'muicss/lib/react/button';
-
+import * as htmlToImage from 'html-to-image';
 
 
 
@@ -32,6 +32,18 @@ const copyMeme = (event) => {
   
 }
 
+const domEl = useRef(null);
+
+const downloadImage = async () => {
+  const dataUrl = await htmlToImage.toPng(domEl.current);
+
+  // download image
+  const link = document.createElement('a');
+  link.download = 'html-to-img.png';
+  link.href = dataUrl;
+  link.click();
+};
+
   return (
     <div>
       
@@ -48,6 +60,7 @@ const copyMeme = (event) => {
         
        
       </div>
+      <div id="domEl" ref={domEl}>
       <div  style={{ position: "relative" }}>
         {image && (
           <img
@@ -100,8 +113,8 @@ const copyMeme = (event) => {
           </div>
         )}
       </div>
-
-     
+      </div>
+      <Button variant="raised" className="downloadBut mui--align-middle" onClick={downloadImage}>Download Meme</Button>
     </div>
   );
 }

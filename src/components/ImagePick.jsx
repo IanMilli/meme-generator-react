@@ -1,7 +1,7 @@
-import React, { useState ,useRef} from "react";
+import React, { useState ,} from "react";
 
 
-import * as htmlToImage from 'html-to-image';
+
 import Col from 'muicss/lib/react/col';
 import Row from 'muicss/lib/react/row';
 import Button from 'muicss/lib/react/button';
@@ -21,17 +21,7 @@ function ImagePick({ images }) {
         setSelectedImage(imageSrc);
 
     };
-        const domEl = useRef(null);
-
-  const downloadImage = async () => {
-    const dataUrl = await htmlToImage.toPng(domEl.current);
-
-    // download image
-    const link = document.createElement('a');
-    link.download = 'html-to-img.png';
-    link.href = dataUrl;
-    link.click();
-  };
+      
   
 
     return (
@@ -59,11 +49,11 @@ function ImagePick({ images }) {
             <Panel className="mui--z5 panel3">
                
                 <Col className="mui--align-middle">
-                <div id="domEl" ref={domEl}>
+                
                     {selectedImage && <img src={selectedImage} alt="Selected"  /> &&
                      <TextOverPhoto topText="Top Text Goes Here" photo={selectedImage} />}
-                    </div>
-                    <Button variant="raised" className="downloadBut mui--align-middle" onClick={downloadImage}>Download Meme</Button>
+                
+                   
                    
                 </Col>
             </Panel>
