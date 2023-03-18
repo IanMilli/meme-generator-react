@@ -27,94 +27,89 @@ function TextOverPhoto(props) {
     setImage(URL.createObjectURL(event.target.files[0]));
   };
 
-const copyMeme = (event) => {
-  console.log ("copyMeme")
-  
-}
+  const copyMeme = (event) => {
+    console.log("copyMeme")
+  }
 
-const domEl = useRef(null);
+  const domEl = useRef(null);
 
-const downloadImage = async () => {
-  const dataUrl = await htmlToImage.toPng(domEl.current);
+  const downloadImage = async () => {
+    const dataUrl = await htmlToImage.toPng(domEl.current);
 
-  // download image
-  const link = document.createElement('a');
-  link.download = 'html-to-img.png';
-  link.href = dataUrl;
-  link.click();
-};
+    // download image
+    const link = document.createElement('a');
+    link.download = 'html-to-img.png';
+    link.href = dataUrl;
+    link.click();
+  };
 
   return (
     <div>
-      
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-     
-        <Textarea label="Top meme text" onChange={handleTopTextChange}  style={{ width: '50%',marginRight:'5vh'   }}  />
-        <Textarea label="Bottom meme text" onChange={handleBottomTextChange} style={{ width: '50%', marginRight:'5vh' }} />
-       
-        <input type="file" accept="image/*" onChange={handleImageChange} />
+        <Textarea label="Top meme text" onChange={handleTopTextChange} style={{ width: '50%', marginRight: '5vh' }} />
+        <Textarea label="Bottom meme text" onChange={handleBottomTextChange} style={{ width: '50%', marginRight: '5vh' }} />
       </div>
-      
+
       <div>
 
-        
-       
+
+
       </div>
       <div id="domEl" ref={domEl}>
-      <div  style={{ position: "relative" }}>
-        {image && (
-          <img
-            src={image}
-            alt="Selected"
-            style={{
+        <div style={{ position: "relative" }}>
+          {image && (
+            <img
+              src={image}
+              alt="Selected"
+              style={{
+                display: 'block',
+                marginLeft: 'auto',
+                marginRight: 'auto',
+                width: '50%',
+                border: 'black solid 1vh',
+                maxWidth: '100%',
+                height: 'auto'
+              }}
+            />
+          )}
+          {topText && (
+            <div
+              style={{
+                position: "absolute",
+                top: "5%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                color: "white",
+                fontWeight: "bold",
+                fontSize: "2rem",
+                textShadow: "2px 2px 4px rgba(0,0,0,0.8)",
+              }}
+            >
+              {topText}
+            </div>
+          )}
 
-              display: 'block',
-              marginLeft: 'auto',
-              marginRight: 'auto',
-              width: '50%',
-              border:'black solid 1vh',
-
-              maxWidth: '100%', height: 'auto'
-
-            }}
-          />
-        )}
-        {topText && (
-          <div
-            style={{
-              position: "absolute",
-              top: "5%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              color: "white",
-              fontWeight: "bold",
-              fontSize: "2rem",
-              textShadow: "2px 2px 4px rgba(0,0,0,0.8)",
-            }}
-          >
-            {topText}
-          </div>
-        )}
-
-        {bottomText && (
-          <div
-            style={{
-              position: "absolute",
-              bottom: "5%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              color: "white",
-              fontWeight: "bold",
-              fontSize: "2rem",
-              textShadow: "2px 2px 4px rgba(0,0,0,0.8)",
-            }}
-          >
-            {bottomText}
-          </div>
-        )}
+          {bottomText && (
+            <div
+              style={{
+                position: "absolute",
+                bottom: "5%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                color: "white",
+                fontWeight: "bold",
+                fontSize: "2rem",
+                textShadow: "2px 2px 4px rgba(0,0,0,0.8)",
+              }}
+            >
+              {bottomText}
+            </div>
+          )}
+        </div>
       </div>
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <Button variant="raised" className="downloadBut mui--align-middle" onClick={downloadImage}>Download Meme</Button>
       </div>
-      <Button variant="raised" className="downloadBut mui--align-middle" onClick={downloadImage}>Download Meme</Button>
     </div>
   );
 }
