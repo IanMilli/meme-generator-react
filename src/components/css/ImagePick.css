@@ -21,11 +21,10 @@
   justify-content: center !important;
 }
 
-.bigPic{
+.meme{
  
   border: solid black 1vh !important;
-  max-width: 100vh;
-  padding: 3vh;
+  height: 30vh;
   margin:5vh;
 
 

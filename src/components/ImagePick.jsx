@@ -11,6 +11,10 @@ import '../components/css/ImagePick.css';
 import TextOverPhoto from './TextOverPhoto';
 
 function ImagePick({ images }) {
+
+
+
+    
     const [selectedImage, setSelectedImage] = useState(null);
 
     const handleImageClick = (imageSrc) => {
@@ -56,9 +60,9 @@ function ImagePick({ images }) {
                
                 <Col className="mui--align-middle">
                 <div id="domEl" ref={domEl}>
-                    {selectedImage && <img src={selectedImage} alt="Selected" className=" bigPic mui--align-middle mui--z3" />}
+                    {selectedImage && <img src={selectedImage} alt="Selected"  /> &&
                     
-                    
+                    <TextOverPhoto topText="Top Text Goes Here" photo={selectedImage} />}
                     </div>
                     <Button variant="raised" className="downloadBut mui--align-middle" onClick={downloadImage}>Download Meme</Button>
                    

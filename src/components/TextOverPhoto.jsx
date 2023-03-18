@@ -34,17 +34,19 @@ const copyMeme = (event) => {
 
   return (
     <div>
+      
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <Textarea label="Top meme text" onChange={handleTopTextChange} style={{ width: '30%' }} />
-        <Textarea label="Bottom meme text" onChange={handleBottomTextChange} style={{ width: '30%' }} />
+      
+        <Textarea label="Top meme text" onChange={handleTopTextChange}  style={{ width: '50%', marginRight:'3vh' ,marginTop:'3vh',backgroundColor:'#FFFBDB '  }}  />
+        <Textarea label="Bottom meme text" onChange={handleBottomTextChange} style={{ width: '50%', marginRight:'3vh' ,marginTop:'3vh',backgroundColor:'#FFFBDB '  }} />
       </div>
       
       <div>
 
         
-        <input type="file" accept="image/*" onChange={handleImageChange}  />
+       
       </div>
-      <div className="meme" style={{ position: "relative" }}>
+      <div  style={{ position: "relative" }}>
         {image && (
           <img
             src={image}
@@ -55,6 +57,7 @@ const copyMeme = (event) => {
               marginLeft: 'auto',
               marginRight: 'auto',
               width: '50%',
+              border:'black solid 2vh',
 
               maxWidth: '100%', height: 'auto'
 
