@@ -61,8 +61,7 @@ function ImagePick({ images }) {
                 <Col className="mui--align-middle">
                 <div id="domEl" ref={domEl}>
                     {selectedImage && <img src={selectedImage} alt="Selected"  /> &&
-                    
-                    <TextOverPhoto topText="Top Text Goes Here" photo={selectedImage} />}
+                     <TextOverPhoto topText="Top Text Goes Here" photo={selectedImage} />}
                     </div>
                     <Button variant="raised" className="downloadBut mui--align-middle" onClick={downloadImage}>Download Meme</Button>
                    

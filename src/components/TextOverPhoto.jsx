@@ -37,8 +37,8 @@ const copyMeme = (event) => {
       
       <div style={{ display: 'flex', justifyContent: 'center' }}>
       
-        <Textarea label="Top meme text" onChange={handleTopTextChange}  style={{ width: '50%', marginRight:'3vh' ,marginTop:'3vh',backgroundColor:'#FFFBDB '  }}  />
-        <Textarea label="Bottom meme text" onChange={handleBottomTextChange} style={{ width: '50%', marginRight:'3vh' ,marginTop:'3vh',backgroundColor:'#FFFBDB '  }} />
+        <Textarea label="Top meme text" onChange={handleTopTextChange}  style={{ width: '50%',   }}  />
+        <Textarea label="Bottom meme text" onChange={handleBottomTextChange} style={{ width: '50%',  }} />
       </div>
       
       <div>
@@ -57,7 +57,7 @@ const copyMeme = (event) => {
               marginLeft: 'auto',
               marginRight: 'auto',
               width: '50%',
-              border:'black solid 2vh',
+              border:'black solid 1vh',
 
               maxWidth: '100%', height: 'auto'
 
