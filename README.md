@@ -1,5 +1,18 @@
 # meme-generator-react
 
+## 🌟[Description](#table-of-contents)
+This app generates a team profile using the Inquirer module from Node.js and displays the information on a newly created HTML page. This app focused on OOP and TDD using jest.
+
+<p>
+    <img src="https://img.shields.io/badge/license-MIT-yellow"/>
+    <img src="https://img.shields.io/badge/-HTML-brightgreen" />
+    <img src="https://img.shields.io/badge/-CSS-lightgrey" />
+    <img src="https://img.shields.io/badge/-JavaScript-blue" />
+    <img src="https://img.shields.io/badge/-bootstrap-yellowgreen"  />
+    <img src="https://img.shields.io/badge/-node.js-orange" />
+
+</p>
+
 ## Table of contents
 
 - [Overview](#overview)
@@ -22,7 +35,7 @@
 
 Describe the challenge here
 
-### Screenshot
+### 📺 Screenshot
 
 ![](./screenshot.jpg)
 
@@ -91,9 +104,9 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 
 ## Author
-  Ian Logendra
-  Emmanouil Giavasis
-  Ian Millichamp
+  Ian Logendra https://github.com/EDX-IL
+  Emmanouil Giavasis https://github.com/manolisgi/
+  Ian Millichamp https://github.com/IanMilli
 - Website - [your name or website url](https://www.your-site.com)
 - GitHub - [your GitHub username](https://github.com/yourusername)
 
