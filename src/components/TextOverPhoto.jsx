@@ -36,9 +36,11 @@ const copyMeme = (event) => {
     <div>
       
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-      
-        <Textarea label="Top meme text" onChange={handleTopTextChange}  style={{ width: '50%',   }}  />
-        <Textarea label="Bottom meme text" onChange={handleBottomTextChange} style={{ width: '50%',  }} />
+     
+        <Textarea label="Top meme text" onChange={handleTopTextChange}  style={{ width: '50%',marginRight:'5vh'   }}  />
+        <Textarea label="Bottom meme text" onChange={handleBottomTextChange} style={{ width: '50%', marginRight:'5vh' }} />
+       
+        <input type="file" accept="image/*" onChange={handleImageChange} />
       </div>
       
       <div>
