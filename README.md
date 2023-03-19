@@ -1,4 +1,4 @@
-# meme-generator-react
+# Meme-Generator-React
 
 ## 🌟[Description](#table-of-contents)
 This app generates a team profile using the Inquirer module from Node.js and displays the information on a newly created HTML page. This app focused on OOP and TDD using jest.
@@ -31,7 +31,7 @@ This app generates a team profile using the Inquirer module from Node.js and dis
 
 ## Overview
 
-### The challenge
+### 🚀 The challenge
 
 Describe the challenge here
 
@@ -54,7 +54,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ## My process
 
-### Built with
+### 🔑 Built with
 
 - Semantic HTML5 markup
 - CSS custom properties
@@ -91,9 +91,13 @@ If you want more help with writing markdown, we'd recommend checking out [The Ma
 
 **Note: Delete this note and the content within this section and replace with your own learnings.**
 
-### Continued development
+### 🤝 Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+I am open to all kinds of contributions. If you want to:
+* 🤔 Suggest a feature
+* 🐛 Report an issue
+* 📖 Improve documentation
+* 👨‍💻 Contribute to the code
 
 **Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
