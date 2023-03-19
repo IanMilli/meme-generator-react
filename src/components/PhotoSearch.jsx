@@ -56,7 +56,7 @@ function PhotoSearch() {
                     </Col>
                     <Col md='3'>
                         <Input onChange={noOfPics} name="deliveryNumber" className="AutoFocus form-control inputBox" placeholder="No of Images-maximum 20"
-                            type="text" />
+                            type="text"maxLength={2}  />
                     </Col>
                     <Row>
                         <div >
