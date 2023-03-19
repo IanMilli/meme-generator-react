@@ -49,10 +49,13 @@ function PhotoSearch() {
                 <h2 className="imageSearch">Search Here For An Image To Use In The Meme Generator</h2>
                 <Row className="inputRow">
                     <Col md='3'>
-                        <Input onChange={handleChange} className="AutoFocus form-control inputBox" placeholder="Type something..." type="text" />
+                        <Input onChange={handleChange} className="AutoFocus form-control inputBox" placeholder="Type something..." type="text" maxLength={25} 
+                     
+        
+                    ></Input>
                     </Col>
                     <Col md='3'>
-                        <Input onChange={noOfPics} name="deliveryNumber" className="AutoFocus form-control inputBox" placeholder="No of Images"
+                        <Input onChange={noOfPics} name="deliveryNumber" className="AutoFocus form-control inputBox" placeholder="No of Images-maximum 20"
                             type="text" />
                     </Col>
                     <Row>
