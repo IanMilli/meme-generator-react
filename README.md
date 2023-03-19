@@ -58,10 +58,10 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 - Semantic HTML5 markup
 - CSS custom properties
-- Flexbox
-- CSS Grid
+- MUI CSS framework 
 - Mobile-first workflow
-
+- Node.js
+- React
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
 
@@ -87,7 +87,6 @@ const proudOfThisFunc = () => {
 };
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
 **Note: Delete this note and the content within this section and replace with your own learnings.**
 
@@ -108,11 +107,12 @@ I am open to all kinds of contributions. If you want to:
 
 
 ## Author
-  Ian Logendra https://github.com/EDX-IL
-  Emmanouil Giavasis https://github.com/manolisgi/
-  Ian Millichamp https://github.com/IanMilli
+* Ian Logendra https://github.com/EDX-IL
+* Emmanouil Giavasis https://github.com/manolisgi/
+* Ian Millichamp https://github.com/IanMilli
+
 - Website - [your name or website url](https://www.your-site.com)
-- GitHub - [your GitHub username](https://github.com/yourusername)
+
 
 **Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
