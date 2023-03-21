@@ -26,6 +26,7 @@ function ImagePick({ images }) {
 
     return (
         <div>
+            
 
             <Row>
 
@@ -57,6 +58,7 @@ function ImagePick({ images }) {
                    
                    
                 </Col>
+
             </Panel>
         </div>
     );
