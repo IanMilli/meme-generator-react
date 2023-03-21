@@ -67,10 +67,13 @@ function ImagePick({ images }) {
 
 
 
+
                     </Col>
+
                 </Panel>
             </div>
         );
     }
 
     export default ImagePick
+

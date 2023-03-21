@@ -3,14 +3,18 @@ import React, { useState, useRef } from 'react';
 import Textarea from 'muicss/lib/react/textarea';
 import Button from 'muicss/lib/react/button';
 import * as htmlToImage from 'html-to-image';
+import TextHandling from "./TextHandling";
+import Dropdown from 'muicss/lib/react/dropdown';
+import DropdownItem from 'muicss/lib/react/dropdown-item';
 
 
 
-function TextOverPhoto({photo}) {
- const [topText, settopText] = useState( "Top Text Here");
- const [bottomText, setbottomText] = useState( "Bottom Text Here");
 
- // const [image, setImage] = useState(props.photo || null);
+function TextOverPhoto({ photo }) {
+  const [topText, settopText] = useState("Top Text Here");
+  const [bottomText, setbottomText] = useState("Bottom Text Here");
+
+  // const [image, setImage] = useState(props.photo || null);
 
   // This function will handle the user input for the text overlay
   const handleTopTextChange = (event) => {
@@ -24,7 +28,7 @@ function TextOverPhoto({photo}) {
 
   // This function will handle the user input for the image file
   const handleImageChange = (event) => {
-  //  setImage(URL.createObjectURL(event.target.files[0]));
+    //  setImage(URL.createObjectURL(event.target.files[0]));
   };
 
   const copyMeme = (event) => {
@@ -46,10 +50,22 @@ function TextOverPhoto({photo}) {
   return (
     <div>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <Textarea label="Top meme text"  maxLength={30} onChange={handleTopTextChange} style={{ width: '50%', marginRight: '5vh' }} />
-        <Textarea label="Bottom meme text"  maxLength={30} onChange={handleBottomTextChange} style={{ width: '50%', marginRight: '5vh' }} />
+        <Textarea label="Top meme text" maxLength={30} onChange={handleTopTextChange} style={{ width: '50%', marginRight: '5vh' }} />
+        <Textarea label="Bottom meme text" maxLength={30} onChange={handleBottomTextChange} style={{ width: '50%', marginRight: '5vh' }} />
+      {/* </div>
+      <div> */}
+      <Dropdown
+          color="primary"
+          label="Text Color"
+          onClick={function() {console.log('toggle clicked')}}
+          onSelect={function(val) {console.log(val);}}
+        >
+          <DropdownItem value="Black">Black</DropdownItem>
+          <DropdownItem value="White">White</DropdownItem>
+          <DropdownItem value="Red">Red</DropdownItem>
+          <DropdownItem value="Magenta">Magenta</DropdownItem>
+        </Dropdown>
       </div>
-
       <div>
 
 
