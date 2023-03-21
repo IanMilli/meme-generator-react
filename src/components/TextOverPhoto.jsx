@@ -11,8 +11,8 @@ import DropdownItem from 'muicss/lib/react/dropdown-item';
 
 
 function TextOverPhoto({ photo }) {
-  const [topText, settopText] = useState("Top Text Here");
-  const [bottomText, setbottomText] = useState("Bottom Text Here");
+  const [topText, settopText] = useState(null);
+  const [bottomText, setbottomText] = useState(null);
 
   // const [image, setImage] = useState(props.photo || null);
 
