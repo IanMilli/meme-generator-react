@@ -11,6 +11,16 @@ import ImagePick from "./ImagePick";
 import '../components/css/ImagePick.css';
 
 function PhotoSearch() {
+//function to scroll down page
+    const handleClickScroll = () => {
+        const element = document.getElementById('sectionA');
+        if (element) {
+            //  Will scroll smoothly to the top of the next section
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+
     const [search, setSearch] = useState("");
     const [perPage, setPerPage] = useState("");
     const [result, setResult] = useState([]);
@@ -18,6 +28,7 @@ function PhotoSearch() {
     function handleChange(event) {
         const search = event.target.value;
         setSearch(search);
+        
     }
     function noOfPics(event) {
         const perPage = event.target.value;
@@ -26,6 +37,8 @@ function PhotoSearch() {
 
     function handleSubmit(event) {
         event.preventDefault();
+        //function calling for page scroll
+        handleClickScroll();
         // Check if perPage is greater than 20
         if (parseInt(perPage) > 20) {
             alert("Please enter a value less than or equal to 20 for No of Images.");
@@ -67,7 +80,7 @@ function PhotoSearch() {
             </div>
             <Container fluid={true}>
                 <Row>
-                    <div className='"alignCards"'>
+                    <div className='"alignCards"' id='sectionA'>
                         {result.map(search => (
                             <Col >
                                 {/* <img src={search.src.small} alt={search.photographer} /> */}
