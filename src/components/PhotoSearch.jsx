@@ -59,7 +59,7 @@ function PhotoSearch() {
     return (
         <Form onSubmit={handleSubmit}>
             <div className="card-header main-search">
-                <h2 className="imageSearch">Search Here For An Image To Use In The Meme Generator</h2>
+                <h2 className="imageSearch">Search Here For An Image To Use In The Meme Generator Below or Upload Your Own</h2>
                 <Row className="inputRow">
                     <Col md='3'>
                         <Input onChange={handleChange} className="AutoFocus form-control inputBox" placeholder="Type something..." type="text" maxLength={25} 

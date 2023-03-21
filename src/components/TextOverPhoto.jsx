@@ -109,6 +109,7 @@ function TextOverPhoto({photo}) {
       </div>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <Button variant="raised" className="downloadBut mui--align-middle" onClick={downloadImage}>Download Meme</Button>
+        <input type="file" accept="image/*" onChange={handleImageChange}  style={{height:'2vw', marginLeft: '4vh'}}/>
       </div>
     </div>
   );
