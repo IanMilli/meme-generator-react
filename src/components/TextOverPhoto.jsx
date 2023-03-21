@@ -56,7 +56,7 @@ function TextOverPhoto({ photo }) {
 
   return (
     <div>
-      <h2 style={{marginBottom:'5vh'}}>Type in the Boxes Below To See your Text On The Image Or Use The Drop Down Menu To Make Style Changes To The Text</h2>
+      <h2 style={{marginBottom:'5vh', textAlign:'Center'}}>Type in the Boxes Below To See your Text On The Image Or Use The Drop Down Menu To Make Style Changes To The Text</h2>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         
         
