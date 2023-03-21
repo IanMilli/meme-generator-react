@@ -5,6 +5,7 @@ import Button from 'muicss/lib/react/button';
 import * as htmlToImage from 'html-to-image';
 import Dropdown from 'muicss/lib/react/dropdown';
 import DropdownItem from 'muicss/lib/react/dropdown-item';
+import Row from 'muicss/lib/react/row';
 
 
 
@@ -55,7 +56,11 @@ function TextOverPhoto({ photo }) {
 
   return (
     <div>
+      <h2 style={{marginBottom:'5vh'}}>Type in the Boxes Below To See your Text On The Image Or Use The Drop Down Menu To Make Style Changes To The Text</h2>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
+        
+        
+        
         <Textarea label="Top meme text" maxLength={30} onChange={handleTopTextChange} style={{ width: '50%', marginRight: '5vh' }} />
         <Textarea label="Bottom meme text" maxLength={30} onChange={handleBottomTextChange} style={{ width: '50%', marginRight: '5vh' }} />
         {/* </div>
