@@ -34,6 +34,7 @@
   align-items: center !important;
   justify-content: center !important;
   background-color: #DA7422;
+  height: 8vh;
 }
 .panel3{
   display: flex !important;

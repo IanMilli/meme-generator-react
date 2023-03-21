@@ -6,9 +6,11 @@ Font-Size: 15px;*/
 
 /*styling for h1 (use vw unit to overide default size and make font screen responsive)*/
 h1{
-  font-size: 4vw;
+  font-size: 2vw;
   color:#30362F;
   font-family: 'Cormorant Garamond', Serif;
+  margin-left: 3vh !important;
+  margin-right: 3vh !important;
 }
 h2{
   font-size: 2vw;
@@ -20,8 +22,10 @@ h2{
 /*styling for top app bar*/
 .topAppBar{
   text-align: center;
-  padding:3vh;
+ 
   background-color:#FFFBDB ;
+
+  border-radius: 48%;
 }
 /*styling for bottom app bar*/
 .bottomAppBar{
