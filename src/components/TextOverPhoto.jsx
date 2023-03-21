@@ -6,11 +6,11 @@ import * as htmlToImage from 'html-to-image';
 
 
 
-function TextOverPhoto(props) {
-  const [topText, settopText] = useState(props.topText || "");
-  const [bottomText, setbottomText] = useState(props.bottomText || "");
+function TextOverPhoto({photo}) {
+ const [topText, settopText] = useState( "Top Text Here");
+ const [bottomText, setbottomText] = useState( "Bottom Text Here");
 
-  const [image, setImage] = useState(props.photo || null);
+ // const [image, setImage] = useState(props.photo || null);
 
   // This function will handle the user input for the text overlay
   const handleTopTextChange = (event) => {
@@ -24,7 +24,7 @@ function TextOverPhoto(props) {
 
   // This function will handle the user input for the image file
   const handleImageChange = (event) => {
-    setImage(URL.createObjectURL(event.target.files[0]));
+  //  setImage(URL.createObjectURL(event.target.files[0]));
   };
 
   const copyMeme = (event) => {
@@ -57,9 +57,9 @@ function TextOverPhoto(props) {
       </div>
       <div id="domEl" ref={domEl}>
         <div style={{ position: "relative" }}>
-          {image && (
+          {photo && (
             <img
-              src={image}
+              src={photo}
               alt="Selected"
               style={{
                 display: 'block',

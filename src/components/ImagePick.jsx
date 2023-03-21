@@ -50,8 +50,9 @@ function ImagePick({ images }) {
                
                 <Col className="mui--align-middle">
                 
-                    {selectedImage && <img src={selectedImage} alt="Selected"  /> &&
-                     <TextOverPhoto topText="Top Text Goes Here" photo={selectedImage} />}
+                
+
+                     <TextOverPhoto topText="Top Text Goes Here" photo={selectedImage} />
                 
                    
                    
