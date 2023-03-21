@@ -3,9 +3,9 @@ import React, { useState, useRef } from 'react';
 import Textarea from 'muicss/lib/react/textarea';
 import Button from 'muicss/lib/react/button';
 import * as htmlToImage from 'html-to-image';
-import TextHandling from "./TextHandling";
 import Dropdown from 'muicss/lib/react/dropdown';
 import DropdownItem from 'muicss/lib/react/dropdown-item';
+
 
 
 
@@ -13,6 +13,12 @@ import DropdownItem from 'muicss/lib/react/dropdown-item';
 function TextOverPhoto({ photo }) {
   const [topText, settopText] = useState(null);
   const [bottomText, setbottomText] = useState(null);
+
+  const [selectedColor, setSelectedColor] = useState('');
+  function handleColorSelect(val) {
+    setSelectedColor(val);
+  }
+
 
   // const [image, setImage] = useState(props.photo || null);
 
@@ -52,13 +58,13 @@ function TextOverPhoto({ photo }) {
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <Textarea label="Top meme text" maxLength={30} onChange={handleTopTextChange} style={{ width: '50%', marginRight: '5vh' }} />
         <Textarea label="Bottom meme text" maxLength={30} onChange={handleBottomTextChange} style={{ width: '50%', marginRight: '5vh' }} />
-      {/* </div>
+        {/* </div>
       <div> */}
-      <Dropdown
+        <Dropdown
           color="primary"
           label="Text Color"
-          onClick={function() {console.log('toggle clicked')}}
-          onSelect={function(val) {console.log(val);}}
+          onClick={function () { console.log('toggle clicked') }}
+          onSelect={handleColorSelect}
         >
           <DropdownItem value="Black">Black</DropdownItem>
           <DropdownItem value="White">White</DropdownItem>
@@ -95,7 +101,7 @@ function TextOverPhoto({ photo }) {
                 top: "5%",
                 left: "50%",
                 transform: "translate(-50%, -50%)",
-                color: "white",
+                color: selectedColor,
                 fontWeight: "bold",
                 fontSize: "2rem",
                 textShadow: "2px 2px 4px rgba(0,0,0,0.8)",
@@ -112,7 +118,7 @@ function TextOverPhoto({ photo }) {
                 bottom: "5%",
                 left: "50%",
                 transform: "translate(-50%, -50%)",
-                color: "white",
+                color: selectedColor,
                 fontWeight: "bold",
                 fontSize: "2rem",
                 textShadow: "2px 2px 4px rgba(0,0,0,0.8)",
