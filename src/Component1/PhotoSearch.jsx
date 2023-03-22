@@ -8,7 +8,7 @@ import Form from 'muicss/lib/react/form';
 import Button from 'muicss/lib/react/button';
 import Input from 'muicss/lib/react/input';
 import ImagePick from "./ImagePick";
-import '../components/css/ImagePick.css';
+import '../Component1/Css/ImagePick.css';
 
 function PhotoSearch() {
 //function to scroll down page

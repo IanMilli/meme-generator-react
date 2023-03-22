@@ -3,9 +3,9 @@ import React, { Component,useRef  } from 'react';
 import ReactDOM from 'react-dom';
 import Appbar from 'muicss/lib/react/appbar';
 import '../src/App.css';
-import PhotoSearch from "./components/PhotoSearch.jsx";
+import PhotoSearch from "./Component1/PhotoSearch.jsx";
 import Panel from 'muicss/lib/react/panel';
-import TextOverPhoto from './components/TextOverPhoto';
+import TextOverPhoto from './Component1/TextOverPhoto';
 
 
 /**changed app.js from a functional component to make a class component */

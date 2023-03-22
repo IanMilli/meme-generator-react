@@ -7,7 +7,7 @@ import Row from 'muicss/lib/react/row';
 import Button from 'muicss/lib/react/button';
 import Appbar from 'muicss/lib/react/appbar';
 import Panel from 'muicss/lib/react/panel';
-import '../components/css/ImagePick.css';
+import '../Component1/Css/ImagePick.css';
 import TextOverPhoto from './TextOverPhoto';
 
 function ImagePick({ images }) {
