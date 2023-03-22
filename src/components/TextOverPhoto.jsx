@@ -6,12 +6,20 @@ import * as htmlToImage from 'html-to-image';
 import Dropdown from 'muicss/lib/react/dropdown';
 import DropdownItem from 'muicss/lib/react/dropdown-item';
 import Row from 'muicss/lib/react/row';
+import { copyImageToClipboard } from 'copy-image-clipboard';
+
 
 
 
 
 
 function TextOverPhoto({ photo }) {
+
+
+
+
+
+  
   const [topText, settopText] = useState(null);
   const [bottomText, setbottomText] = useState(null);
 
@@ -20,9 +28,13 @@ function TextOverPhoto({ photo }) {
     setSelectedColor(val);
   }
 
-
-  // const [image, setImage] = useState(props.photo || null);
-
+  const [imgfile, uploadimg] = useState([])
+  console.log("Image FIles",photo);
+const imgFilehandler = (e) => {
+  if (e.target.files.length !== 0) {
+    uploadimg(imgfile => [...imgfile, URL.createObjectURL(e.target.files[0])])
+  }
+}
   // This function will handle the user input for the text overlay
   const handleTopTextChange = (event) => {
     settopText(event.target.value);
@@ -38,9 +50,7 @@ function TextOverPhoto({ photo }) {
     //  setImage(URL.createObjectURL(event.target.files[0]));
   };
 
-  const copyMeme = (event) => {
-    console.log("copyMeme")
-  }
+ 
 
   const domEl = useRef(null);
 
@@ -52,7 +62,31 @@ function TextOverPhoto({ photo }) {
     link.download = 'html-to-img.png';
     link.href = dataUrl;
     link.click();
+
+   
+
   };
+  const copyImage = async () => {
+    // convert the domEl.current into an image using the htmltoImage library
+    const dataUrl = await htmlToImage.toPng(domEl.current);
+ //copy image 
+ // create a tag element 
+ const link=document.createElement('a')
+ // link the a tag element to the href value  of dataURL
+ link.href =dataUrl;
+ //use copy Image to clipboard library imputing value of link
+ copyImageToClipboard(link)
+ .then(() => {
+  // if copied to clipboard alert 'image copied'
+  alert('Image Copied')
+ })
+ //if doesnt work console log why
+ .catch((e) => {
+  console.log(link)
+  console.log('Error', e.message)
+ })
+ 
+  }
 
   return (
     <div>
@@ -96,7 +130,9 @@ function TextOverPhoto({ photo }) {
                 border: 'black solid 1vh',
                 maxWidth: '100%',
                 height: 'auto'
+               
               }}
+              id="photoImg"
             />
           )}
           {topText && (
@@ -136,9 +172,28 @@ function TextOverPhoto({ photo }) {
       </div>
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <Button variant="raised" className="downloadBut mui--align-middle" onClick={downloadImage}>Download Meme</Button>
+        <Button variant="raised" className="downloadBut mui--align-middle" onClick={copyImage}>Copy Meme</Button>
         <input type="file" accept="image/*" onChange={handleImageChange}  style={{height:'2vw', marginLeft: '4vh'}}/>
       </div>
+      <div>
+        <center>
+          <h2>Upload</h2>
+          <input type="file" onChange={imgFilehandler} />
+          <hr />
+          <h2>Preview</h2>
+          {imgfile.map((photoImg) => {
+            return <>
+              <span key={photoImg}>
+                <img src={photoImg} height="200" width="200" alt="med1" />
+              </span>
+            </>
+          })}
+        </center>
+      </div>
     </div>
+  
+
+  
   );
 }
 
