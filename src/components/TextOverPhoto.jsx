@@ -5,7 +5,6 @@ import Button from 'muicss/lib/react/button';
 import * as htmlToImage from 'html-to-image';
 import Dropdown from 'muicss/lib/react/dropdown';
 import DropdownItem from 'muicss/lib/react/dropdown-item';
-import Row from 'muicss/lib/react/row';
 import { copyImageToClipboard } from 'copy-image-clipboard';
 
 
@@ -22,19 +21,18 @@ function TextOverPhoto({ photo }) {
   
   const [topText, settopText] = useState(null);
   const [bottomText, setbottomText] = useState(null);
-
+  
   const [selectedColor, setSelectedColor] = useState('');
+
+
+
+  
   function handleColorSelect(val) {
     setSelectedColor(val);
   }
 
-  const [imgfile, uploadimg] = useState([])
-  console.log("Image FIles",photo);
-const imgFilehandler = (e) => {
-  if (e.target.files.length !== 0) {
-    uploadimg(imgfile => [...imgfile, URL.createObjectURL(e.target.files[0])])
-  }
-}
+  
+
   // This function will handle the user input for the text overlay
   const handleTopTextChange = (event) => {
     settopText(event.target.value);
@@ -45,10 +43,7 @@ const imgFilehandler = (e) => {
     setbottomText(event.target.value);
   };
 
-  // This function will handle the user input for the image file
-  const handleImageChange = (event) => {
-    //  setImage(URL.createObjectURL(event.target.files[0]));
-  };
+  
 
  
 
@@ -105,8 +100,8 @@ const imgFilehandler = (e) => {
           onClick={function () { console.log('toggle clicked') }}
           onSelect={handleColorSelect}
         >
-          <DropdownItem value="Black">Black</DropdownItem>
           <DropdownItem value="White">White</DropdownItem>
+          <DropdownItem value="Black">Black</DropdownItem>
           <DropdownItem value="Red">Red</DropdownItem>
           <DropdownItem value="Magenta">Magenta</DropdownItem>
         </Dropdown>
@@ -173,23 +168,9 @@ const imgFilehandler = (e) => {
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <Button variant="raised" className="downloadBut mui--align-middle" onClick={downloadImage}>Download Meme</Button>
         <Button variant="raised" className="downloadBut mui--align-middle" onClick={copyImage}>Copy Meme</Button>
-        <input type="file" accept="image/*" onChange={handleImageChange}  style={{height:'2vw', marginLeft: '4vh'}}/>
+        
       </div>
-      <div>
-        <center>
-          <h2>Upload</h2>
-          <input type="file" onChange={imgFilehandler} />
-          <hr />
-          <h2>Preview</h2>
-          {imgfile.map((photoImg) => {
-            return <>
-              <span key={photoImg}>
-                <img src={photoImg} height="200" width="200" alt="med1" />
-              </span>
-            </>
-          })}
-        </center>
-      </div>
+     
     </div>
   
 

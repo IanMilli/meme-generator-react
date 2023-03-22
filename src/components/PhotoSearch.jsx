@@ -27,6 +27,7 @@ function PhotoSearch() {
 
     function handleChange(event) {
         const search = event.target.value;
+        
         setSearch(search);
         
     }
@@ -44,6 +45,12 @@ function PhotoSearch() {
             alert("Please enter a value less than or equal to 20 for No of Images.");
             return;
         }
+        
+            if(search ==="")
+            {
+                alert("Please enter the some text")
+                return;
+            }
         const url = "https://api.pexels.com/v1/search?query=" + search + "&per_page=" + perPage;
         const access_token = 'y8Z3JcRLu0Lwsh64Cnt8G58MLEXkH9uZXwhapvDSJeORtiiGXGIEWHZm';
         axios.get(url, {
