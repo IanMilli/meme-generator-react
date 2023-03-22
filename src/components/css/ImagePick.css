@@ -58,7 +58,7 @@
   color: #FFFBDB;
   border-radius: 50%;
 }
-.downloadBut{
+.downloadBut , .copyBut{
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;

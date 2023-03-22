@@ -1,16 +1,14 @@
+import React, { useState, useRef } from "react";
+import Textarea from "muicss/lib/react/textarea";
+import Button from "muicss/lib/react/button";
+import * as htmlToImage from "html-to-image";
+import { copyImageToClipboard } from "copy-image-clipboard";
 
-import React, { useState, useRef } from 'react';
-import Textarea from 'muicss/lib/react/textarea';
-import Button from 'muicss/lib/react/button';
-import * as htmlToImage from 'html-to-image';
+function TextOverPhoto({ photo }) {
+  const [topText, settopText] = useState("Top Text Here");
+  const [bottomText, setbottomText] = useState("Bottom Text Here");
 
-
-
-function TextOverPhoto({photo}) {
- const [topText, settopText] = useState( "Top Text Here");
- const [bottomText, setbottomText] = useState( "Bottom Text Here");
-
- // const [image, setImage] = useState(props.photo || null);
+  // const [image, setImage] = useState(props.photo || null);
 
   // This function will handle the user input for the text overlay
   const handleTopTextChange = (event) => {
@@ -23,38 +21,57 @@ function TextOverPhoto({photo}) {
   };
 
   // This function will handle the user input for the image file
-  const handleImageChange = (event) => {
+  // const handleImageChange = (event) => {
   //  setImage(URL.createObjectURL(event.target.files[0]));
-  };
-
-  const copyMeme = (event) => {
-    console.log("copyMeme")
-  }
+  // };
 
   const domEl = useRef(null);
+
+  //function to copy meme to clipboard
+  const copyImage = async () => {
+
+  const memeImg  = await htmlToImage.toPng(domEl.current);
+
+    // Pass the image src attribute here
+    copyImageToClipboard(
+      memeImg,
+    )
+      .then(() => {
+        console.log('Image Copied')
+      })
+      .catch((e) => {
+        console.log('Error: ', e.message)
+      })
+  };
 
   const downloadImage = async () => {
     const dataUrl = await htmlToImage.toPng(domEl.current);
 
     // download image
-    const link = document.createElement('a');
-    link.download = 'html-to-img.png';
+    const link = document.createElement("a");
+    link.download = "html-to-img.png";
     link.href = dataUrl;
     link.click();
   };
 
   return (
     <div>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <Textarea label="Top meme text"  maxLength={30} onChange={handleTopTextChange} style={{ width: '50%', marginRight: '5vh' }} />
-        <Textarea label="Bottom meme text"  maxLength={30} onChange={handleBottomTextChange} style={{ width: '50%', marginRight: '5vh' }} />
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <Textarea
+          label="Top meme text"
+          maxLength={30}
+          onChange={handleTopTextChange}
+          style={{ width: "50%", marginRight: "5vh" }}
+        />
+        <Textarea
+          label="Bottom meme text"
+          maxLength={30}
+          onChange={handleBottomTextChange}
+          style={{ width: "50%", marginRight: "5vh" }}
+        />
       </div>
 
-      <div>
-
-
-
-      </div>
+      <div></div>
       <div id="domEl" ref={domEl}>
         <div style={{ position: "relative" }}>
           {photo && (
@@ -62,13 +79,13 @@ function TextOverPhoto({photo}) {
               src={photo}
               alt="Selected"
               style={{
-                display: 'block',
-                marginLeft: 'auto',
-                marginRight: 'auto',
-                width: '50%',
-                border: 'black solid 1vh',
-                maxWidth: '100%',
-                height: 'auto'
+                display: "block",
+                marginLeft: "auto",
+                marginRight: "auto",
+                width: "50%",
+                border: "black solid 1vh",
+                maxWidth: "100%",
+                height: "auto",
               }}
             />
           )}
@@ -107,8 +124,22 @@ function TextOverPhoto({photo}) {
           )}
         </div>
       </div>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <Button variant="raised" className="downloadBut mui--align-middle" onClick={downloadImage}>Download Meme</Button>
+      <div style={{ display: "flex", justifyContent: "center" }}>
+        <Button
+          variant="raised"
+          className="downloadBut mui--align-middle"
+          onClick={downloadImage}
+        >
+          Download Meme
+        </Button>
+        <p> </p>
+        <Button
+          variant="raised"
+          className="copyBut mui--align-middle"
+          onClick={copyImage}
+        >
+          Copy Meme To Clipboard
+        </Button>
       </div>
     </div>
   );
