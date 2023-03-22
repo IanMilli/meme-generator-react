@@ -95,7 +95,8 @@ function TextOverPhoto({ photo }) {
         {/* </div>
       <div> */}
         <Dropdown
-          color="primary"
+       style={{backgroundColor:'#DA7422 ', color:'#FFFBDB'}}
+          variant = 'raised'
           label="Text Color"
           onClick={function () { console.log('toggle clicked') }}
           onSelect={handleColorSelect}
