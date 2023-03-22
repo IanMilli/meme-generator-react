@@ -24,7 +24,10 @@ function TextOverPhoto({ photo }) {
   
   const [selectedColor, setSelectedColor] = useState('');
 
-
+ // This function will handle the user input for the image file
+ const handleImageChange = (event) => {
+  setImage(URL.createObjectURL(event.target.files[0]));
+};
 
   
   function handleColorSelect(val) {
@@ -169,6 +172,7 @@ function TextOverPhoto({ photo }) {
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <Button variant="raised" className="downloadBut mui--align-middle" onClick={downloadImage}>Download Meme</Button>
         <Button variant="raised" className="downloadBut mui--align-middle" onClick={copyImage}>Copy Meme</Button>
+       
         
       </div>
      
