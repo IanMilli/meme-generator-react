@@ -67,11 +67,11 @@ function PhotoSearch() {
     return (
         <Form onSubmit={handleSubmit}>
             <div className="card-header main-search">
-                <h2 data-aos="zoom-in-left"  data-aos-duration="1500">Search for your perfect meme image using the Image Search or upload your own with the Image Uploader</h2>
+                <h2 data-aos="fade-left"  data-aos-duration="2500">Search for your perfect meme image using the Image Search or upload your own with the Image Uploader</h2>
                                 <Panel className='subtitlePanel mui--z5'>
                     <h1 data-aos="zoom-in" data-aos-duration="3000">Image Search</h1>
                 </Panel>
-                <h2  data-aos="zoom-in-right"  data-aos-duration="1500">Enter a search choice and the number of Images you wish to peruse up to 20 in the boxes below</h2>
+                <h2  data-aos="fade-right"  data-aos-duration="2500">Enter a search choice and the number of Images you wish to peruse up to 20 in the boxes below</h2>
                 <Row className="inputRow">
                     <Col md='3'>
                         <Input onChange={handleChange} className="AutoFocus form-control inputBox mui--z4" placeholder="Type something..." type="text" maxLength={25}>
