@@ -22,14 +22,11 @@ function TextOverPhoto({ photo }) {
   const [topText, settopText] = useState(null);
   const [bottomText, setbottomText] = useState(null);
 
-  //const [photo, setImage] = useState(photo || null);
+ 
 
   const [selectedColor, setSelectedColor] = useState('');
 
- // This function will handle the user input for the image file
- //const handleImageChange = (event) => {
- // setImage(URL.createObjectURL(event.target.files[0]));
-//};
+ 
 
   
   function handleColorSelect(val) {

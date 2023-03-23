@@ -23,6 +23,13 @@ function ImagePick({ images }) {
 
 
 
+// This function will handle the user input for the image file
+const handleImageChange = (event) => {
+ setSelectedImage(URL.createObjectURL(event.target.files[0]));
+};
+
+
+
         const [selectedImage, setSelectedImage] = useState(null);
 
         const handleImageClick = (imageSrc) => {
@@ -65,7 +72,7 @@ function ImagePick({ images }) {
 
                         <TextOverPhoto topText="Top Text Goes Here" photo={selectedImage} />
 
-
+                        <input type="file" accept="image/*" onChange={handleImageChange} />
 
 
                     </Col>
