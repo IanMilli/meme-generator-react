@@ -6,7 +6,7 @@ import * as htmlToImage from 'html-to-image';
 import Dropdown from 'muicss/lib/react/dropdown';
 import DropdownItem from 'muicss/lib/react/dropdown-item';
 import { copyImageToClipboard } from 'copy-image-clipboard';
-
+import Input from 'muicss/lib/react/input';
 
 
 
@@ -91,22 +91,18 @@ function TextOverPhoto({ photo }) {
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         
         
-        
-        <Textarea label="Top meme text" maxLength={30} onChange={handleTopTextChange} style={{ width: '50%', marginRight: '5vh' }} />
-        <Textarea label="Bottom meme text" maxLength={30} onChange={handleBottomTextChange} style={{ width: '50%', marginRight: '5vh' }} />
-        {/* </div>
-      <div> */}
+      <Input onChange={handleTopTextChange} className="AutoFocus form-control inputBoxMeme mui--z3" placeholder="Text For The Top Of The Meme" type="text" maxLength={30} />
+      <Input onChange={handleBottomTextChange} className="AutoFocus form-control inputBoxMeme mui--z3" placeholder="Text For The Bottom Of The Meme" type="text" maxLength={30} />
         <Dropdown
-       style={{backgroundColor:'#DA7422 ', color:'#FFFBDB'}}
-          variant = 'raised'
           label="Text Color"
           onClick={function () { console.log('toggle clicked') }}
           onSelect={handleColorSelect}
+          className='mui--z4 dropdownMain'
         >
-          <DropdownItem value="White">White</DropdownItem>
-          <DropdownItem value="Black">Black</DropdownItem>
-          <DropdownItem value="Red">Red</DropdownItem>
-          <DropdownItem value="Magenta">Magenta</DropdownItem>
+          <DropdownItem className='dropDownColorWhite' value="White">White</DropdownItem>
+          <DropdownItem className='dropDownColorBlack' value="Black">Black</DropdownItem>
+          <DropdownItem className='dropDownColorRed'value="Red">Red</DropdownItem>
+          <DropdownItem className='dropDownColorMagenta'value="Magenta">Magenta</DropdownItem>
         </Dropdown>
       </div>
       <div>
@@ -124,11 +120,11 @@ function TextOverPhoto({ photo }) {
                 display: 'block',
                 marginLeft: 'auto',
                 marginRight: 'auto',
-                width: '50%',
                 border: 'black solid 1vh',
                 maxWidth: '100%',
-                height: 'auto'
-               
+                height: '60vh',
+                marginBottom:'5vh',
+                marginTop:'3vh',
               }}
               id="photoImg"
             />
@@ -168,9 +164,9 @@ function TextOverPhoto({ photo }) {
           )}
         </div>
       </div>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <Button variant="raised" className="downloadBut mui--align-middle" onClick={downloadImage}>Download Meme</Button>
-        <Button variant="raised" className="downloadBut mui--align-middle" onClick={copyImage}>Copy Meme</Button>
+      <div data-aos="fade-up" data-aos-duration="3000" style={{ display: 'flex', justifyContent: 'center' }}>
+        <Button  variant="raised" className="downloadBut mui--align-middle mui--z4" onClick={downloadImage}>Download Meme</Button>
+        <Button  variant="raised" className="downloadBut mui--align-middle mui--z4" onClick={copyImage}>Copy Meme</Button>
         
         
       </div>

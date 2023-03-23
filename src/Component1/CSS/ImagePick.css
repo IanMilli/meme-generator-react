@@ -1,64 +1,66 @@
-.imageSearch{
-  text-align: center;
-  margin-bottom: 8vh;
-}
 
+/*styling for input row for search images*/
 .inputRow {
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
 }
-
+/*styling for small image boxes*/
 .smallImages {
   border: solid black 1vh;
   max-height: 30vh;
   margin:5vh;
 }
-
+/*styling to arrange small images*/
 .smallImageColumn{
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
 }
 
-.meme{
- 
-  border: solid black 1vh !important;
-  height: 30vh;
-  margin:5vh;
-
-
-}
+/*styling for top header panel*/
 .panel{
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   background-color: #DA7422;
-  height: 8vh;
+  height: 15vh;
+  border-bottom: #625834 solid 1vh;
+  border-top: #625834 solid 1vh;
+  
 }
-.panel3{
+/*styling for subtitle Panels*/
+.subtitlePanel{
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
- 
+  width:50vh;
+  height: 3vh !important;
+  margin-left: auto;
+  margin-right: auto;
 }
+
+/*styling for bottom appbar*/
 .panel4{
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
- height: 10vh;
+ height: 8vh;
  border-top: #DA7422 solid 1vh;
-  
+ border-bottom: #DA7422 solid 1vh;
  background-color:#FFFBDB ;
  margin-top: 3vh;
 }
-
+/*styling for search button*/
 .searchBut{
   margin-left: 5vh;
   background-color:#DA7422 ;
   color: #FFFBDB;
   border-radius: 50%;
+  margin-bottom: 2vh;
+  height: 8vh;
 }
+/*styling for download and copy button*/
 .downloadBut{
   display: flex !important;
   align-items: center !important;
@@ -66,19 +68,43 @@
   background-color:#DA7422 ;
   color: #FFFBDB;
   border-radius: 50%;
+  width:30vh;
+  margin-right: 5vh;
+  margin-left: 5vh;
 }
 
-
+/*styling for input boxes for image search*/
 .inputBox{
   background-color:  #FFFBDB;
-  border-radius: 5%;
-  height: 2vw !important;
+  border:#30362F  solid 1px;
+  height: 5vh !important;
+  text-align: center;
 }
-
+/*styling for meme text input boxes*/
+.inputBoxMeme{
+  background-color:  #FFFBDB;
+  border:#30362F  solid 1px;
+  height: 5vh !important;
+  text-align: center;
+  width: 50vh;
+  margin-right: 5vh;
+}
+/*styling for input boxes for upload*/
+.inputBoxUpload{
+  background-color:  #FFFBDB;
+  border:#30362F  solid 1px;
+  height: 5vh!important;
+  text-align: center;
+ margin-left:42%;
+  margin-bottom: 3vh !important;
+  width:40vh;
+}
+/*styling for input box placeholder text*/
 ::placeholder {
   color: #625834 !important;
   opacity: 1; /* Firefox */
-  margin-left: 3vh !important;
+  text-align: center !important;
+  font-weight: 600;
 }
 
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
@@ -90,11 +116,66 @@
  color: #625834 !important;
  margin-left: 3vh !important;
 }
+/*styling for dropdown box*/
+.dropdownMain{
+  background-color: #FFFBDB;
+}
+/*styling for dropdown item*/
+.dropDownColorWhite{
+ background-color: #DA7422;
+  text-align: center;
+  margin-bottom: 0.5vh;
+  margin-top: 1vh;
+  height:5vh;
+  font-weight: 700;
+}
+/*styling for dropdown item*/
+.dropDownColorBlack{
+  background-color: #30362F;
+  margin-bottom: 0.5vh;
+  margin-top: 0.5vh;
+  text-align: center;
+  height:5vh;
+  font-weight: 700;
+}
+/*styling for dropdown item*/
+.dropDownColorRed{
+  background-color: red;
+  margin-bottom: 0.5vh;
+  margin-top: 0.5vh;
+  text-align: center;
+  height:5vh;
+  font-weight: 700;
+}
+/*styling for dropdown item*/
+.dropDownColorMagenta{
+  background-color: magenta;
+  margin-bottom: 1vh;
+  margin-top: 0.5vh;
+  text-align: center;
+  height:5vh;
+  font-weight: 700;
+}
+/*styling for text in dropdown menu as a links*/
+a{
+  color:#FFFBDB !important;
+  font-size: 2vh;
+}
+/*styling for back of dropdown menu*/
+.mui-dropdown__menu {
+  background-color: #FFFBDB;
+  border:#30362F solid 1px
+}
 
-.scrollText{
-  font-size: 2.5vw;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
+@media (max-width:750px) {
+  .inputBoxUpload{
+    margin-left: 25%;
+  }
 
+}
+
+@media (max-width: 1000px) {
+  .inputBoxUpload{
+    margin-left: 35%;
+  }
 }

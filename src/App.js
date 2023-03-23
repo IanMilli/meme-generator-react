@@ -36,7 +36,7 @@ class App extends Component {
     return (
       <div>
         <Panel className="mui--z5 panel">
-          <Appbar className='topAppBar'><h1>Image Search</h1></Appbar>
+          <Appbar className='topAppBar mui--z5 'data-aos="flip-right" data-aos-duration="1500"><h1 data-aos="zoom-in" data-aos-duration="3000" >MII Meme Generator</h1></Appbar>
         </Panel>
         <div>
           <div>
@@ -52,8 +52,10 @@ class App extends Component {
         </div>
        
         <Panel className="mui--z5 panel4">
-          <Appbar className='bottomAppBar'><a style={{ color: '#DA7422' }} href="https://github.com/IanMilli/meme-generator-react">© 2023 Copyright: Manolis Giavasis, Ian Logendra & Ian
-            Millichamp</a></Appbar>
+          <div className='footer'>
+          <a style={{ color: '#DA7422' }} href="https://github.com/IanMilli/meme-generator-react">© 2023 Copyright: Manolis Giavasis, Ian Logendra & Ian
+            Millichamp</a>
+            </div>
         </Panel>
       </div>
     );
