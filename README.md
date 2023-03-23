@@ -33,16 +33,25 @@ This web application is a Meme Generator that allows a user to search for images
 Screenshots of the Application in Use
 
 
-*
-*
-*
-*
-*
+* ![home](https://user-images.githubusercontent.com/120601739/227289771-25ed8af1-de4e-460a-af84-ca7931b6e048.png)
+
+* ![search](https://user-images.githubusercontent.com/120601739/227289824-4fced582-5de3-4fe8-b22b-7214e63de275.png)
+
+* ![meme picture selected](https://user-images.githubusercontent.com/120601739/227289929-730335f3-1496-432d-b92a-08822364e508.png)
+
+* ![text added](https://user-images.githubusercontent.com/120601739/227290028-9c26470f-740a-4ba7-9a0c-cf247086a6f0.png)
+
+* ![text color changed](https://user-images.githubusercontent.com/120601739/227290218-e844eb60-50c4-449c-b5e0-1faeec9bb68d.png)
+
 
 Examples of Generated Memes
 
-*
-*
+* ![meme example 1](https://user-images.githubusercontent.com/120601739/227291236-579eff5d-d275-4b7c-a07a-9e5b6018c740.png)
+
+* ![meme example 2](https://user-images.githubusercontent.com/120601739/227291416-f0080d95-8ea7-41a7-afb4-a639887729de.png)
+
+* ![meme3](https://user-images.githubusercontent.com/120601739/227293609-b8b6ea84-d180-402a-87b8-08376b1d580d.png)
+
 
 ## Features
 
@@ -73,8 +82,6 @@ as well as React JS, the MUICSS framework, AOS npm library, HTMLtoIMage npm Libr
 
 ## Links
 
-
-
 - [GitHub Repository](https://github.com/IanMilli/meme-generator-react)
 - [Deployed Application](https://gh-pages--meme-generate-mii1.netlify.app/)
 
@@ -94,6 +101,7 @@ We then set up the git hub repository and created the initial react application 
 The first stage of our project after crafting our user story was to wire frame our project. The following is the wire frame for the mvp which has since evolved.
 
 
+![wireframe mvp](https://user-images.githubusercontent.com/120601739/227291671-a5900722-d3bc-4c87-8693-4dbdf6bd8696.png)
 
 ## Usage
 To use the site a user can access the web application by going to the link for deployed application at [Links](#links)
@@ -102,9 +110,16 @@ We first met to discuss the idea for the project. We looked at several options a
 
 Once there they can search for a picture to form the backdrop of their Meme using our picture search feature or upload their own image from their computer. Once they have selected the image that they wish to work on they can add text to both the bottom and or the top of the picture using the input boxes in the meme generator section. They can style the text and then copy the image to their clipboard or download it to their computer.
 
+A video showing how to use the site can be viewed at : [video](https://drive.google.com/file/d/1f0qJlpV8w7Xx_cKwVVAwDdVIPKW3uq7L/view)
+
+or the following gif gives some detail to how it should be used:
+
+
+![meme generator App](https://user-images.githubusercontent.com/120601739/227296391-03ca5225-1bb6-433b-ba34-d6611e49aa6a.gif)
+
 
 ## Presentation
-The following link will allow you to see our presentation document : [MII Meme Generator Presentation]()
+The following link will allow you to see our presentation document : [MII Meme Generator Presentation](https://drive.google.com/drive/u/0/mobile/?usp=slides_web)
 
 
 ## What We learned
