@@ -1,8 +1,7 @@
 # Meme-Generator-React
 
 ## 🌟[Description](#table-of-contents)
-This app generates a team profile using the Inquirer module from Node.js and displays the information on a newly created HTML page. This app focused on OOP and TDD using jest.
-
+The meme generator allows the user to search using a keyword for up to 20 images, then select (and reselect) and image, on to which they can add text to the top and bottom of the photo and choose the colour of the text
 <p>
     <img src="https://img.shields.io/badge/license-MIT-yellow"/>
     <img src="https://img.shields.io/badge/-HTML-brightgreen" />
@@ -27,25 +26,27 @@ This app generates a team profile using the Inquirer module from Node.js and dis
 - [Author](#author)
 - [Acknowledgments](#acknowledgments)
 
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
 ### 🚀 The challenge
 
-Describe the challenge here
+Use everything we've learned on the course to create a real-world client-side single-page application that will be a showcase to potential employers. 
+
+We will:
+- Use React.
+- Use Node.js.
+- Be deployed using Netlify.
+- Use at least two libraries, packages, or technologies that we haven't discussed.
+- Have a polished front end/UI.
+- Meet good quality coding standards (indentation, scoping, naming).
+- Have a quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
 ### 📺 Screenshot
 
 ![](./screenshot.jpg)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
 
 ### Links
 
@@ -53,6 +54,8 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
+
+We first met to discuss the idea for the project. We looked at several options and landed on a Meme Generator. We then created the GitHub repository to host our development and shared access. We used this repo to create a Kanban board / project. We then allocated / took tasks from the Kanban board and worked on our development. We did a stand up meeting most days and updated each other with progress and challenges. We used Slack in between those times to communicate with each other. We made sure we tackled MVP and avoided specification creep.
 
 ### 🔑 Built with
 
@@ -63,63 +66,49 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Node.js
 - React
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
-### What I learned
+### What We learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
-
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+Cool function to download the element which had the image and text overlayed as a png file
 
 ```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
+const downloadImage = async () => {
+    const dataUrl = await htmlToImage.toPng(domEl.current);
+    // download image
+    const link = document.createElement('a');
+    link.download = 'html-to-img.png';
+    link.href = dataUrl;
+    link.click();
+  }
 ```
 
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### 🤝 Continued development
 
-I am open to all kinds of contributions. If you want to:
-* 🤔 Suggest a feature
-* 🐛 Report an issue
-* 📖 Improve documentation
-* 👨‍💻 Contribute to the code
+* User can change font, font size, position and free-choice of colour for text
+* Add more formats such as bmp, jpeg etc the user can choose from
+* Carousel beneath the text so the user can audition the results of the image search automatically
+* Storage of user generated memes online so users/others can link/use the memes
+* Allow the user to make multiple searches and amalgamate the their chosen results
+* Allow the user to create multiple meme files at once
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
 ### Useful resources
 
-- [refence material for adding photos drom free api into a react app](https://medium.com/@yahtzeemoomtaz/fetch-from-an-api-and-display-some-pictures-react-4de2a027eda7) 
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Fetch from an API and Display Picture](https://medium.com/@yahtzeemoomtaz/fetch-from-an-api-and-display-some-pictures-react-4de2a027eda7) - This was an excellent reference for the first part of our project.
+- [Copy to Clipboard Library](https://www.npmjs.com/package/copy-image-clipboard) - This allowed us to add the copy to clipboard functionality
+- [Git Hub Pages Deployment](https://medium.com/mobile-web-dev/how-to-build-and-deploy-a-react-app-to-github-pages-in-less-than-5-minutes-d6c4ffd30f14) - This article was a good reference on how to deploy our project to GitHub Pages
+- [Mui CSS Framework](https://www.muicss.com/) - We used Mui CSS as our CSS Framework. We used the documentation extensively. 
 
 
-## Author
+## Authors
 * Ian Logendra https://github.com/EDX-IL
 * Emmanouil Giavasis https://github.com/manolisgi/
 * Ian Millichamp https://github.com/IanMilli
 
-- Website - [your name or website url](https://www.your-site.com)
-
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
 ## Acknowledgments
 
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- We would like to thank, Dane, Andrew, Noah, Brooke,and Jonathan for all their help throughout the course and specifically on this project. Their patience and knowledge were instrumental in our success.  
 =======
 
