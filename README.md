@@ -29,7 +29,9 @@ This web application is a Meme Generator that allows a user to search for images
 
 ## Screenshot
 
+
 Screenshots of the Application in Use
+
 
 *
 *
@@ -68,12 +70,16 @@ The web application has been generated using the following technologies:
 as well as React JS, the MUICSS framework, AOS npm library, HTMLtoIMage npm Library, CopyToCliboard, NPM Library, Pexel Image API, Axios
 
 
+
 ## Links
 
+
+
 - [GitHub Repository](https://github.com/IanMilli/meme-generator-react)
-- [Deployed Application]()
+- [Deployed Application](https://gh-pages--meme-generate-mii1.netlify.app/)
 
 ## Development
+
 
 First we crafted the user story :
 
@@ -88,10 +94,14 @@ We then set up the git hub repository and created the initial react application 
 The first stage of our project after crafting our user story was to wire frame our project. The following is the wire frame for the mvp which has since evolved.
 
 
+
 ## Usage
 To use the site a user can access the web application by going to the link for deployed application at [Links](#links)
 
+We first met to discuss the idea for the project. We looked at several options and landed on a Meme Generator. We then created the GitHub repository to host our development and shared access. We used this repo to create a Kanban board / project. We then allocated / took tasks from the Kanban board and worked on our development. We did a stand up meeting most days and updated each other with progress and challenges. We used Slack in between those times to communicate with each other. We made sure we tackled MVP and avoided specification creep.
+
 Once there they can search for a picture to form the backdrop of their Meme using our picture search feature or upload their own image from their computer. Once they have selected the image that they wish to work on they can add text to both the bottom and or the top of the picture using the input boxes in the meme generator section. They can style the text and then copy the image to their clipboard or download it to their computer.
+
 
 ## Presentation
 The following link will allow you to see our presentation document : [MII Meme Generator Presentation]()
@@ -105,15 +115,26 @@ The following link will allow you to see our presentation document : [MII Meme G
 
 * How to adapt code to work the way we require to enable the features that we want to produce
 
+*Cool function to download the element which had the image and text overlayed as a png file
+
 ## 🤝 Continued development
+
+
+### What We learned
+
 
 To develop this project we could :
 
-Increase the number of styling parameters that a user could add to the project to adapt their meme.
-Add feature to allow user to directly share their meme into a social media application such as slack, discord, facebook,etc
-Add a warning so if a user gets no response from the API they will be informed.
-Connect a messaging app that allows a user to send images.
 
+* Increase the number of styling parameters that a user could add to the project to adapt their meme.
+* Add feature to allow user to directly share their meme into a social media application such as slack, discord, facebook,etc
+* Add a warning so if a user gets no response from the API they will be informed.
+* Connect a messaging app that allows a user to send images.
+* Add more formats such as bmp, jpeg etc the user can choose from
+* Carousel beneath the text so the user can audition the results of the image search automatically
+* Storage of user generated memes online so users/others can link/use the memes
+* Allow the user to make multiple searches and amalgamate the their chosen results
+* Allow the user to create multiple meme files at once
 We are open to all kinds of contributions. If you want to:
 
 * 🤔 Suggest a feature
@@ -122,9 +143,6 @@ We are open to all kinds of contributions. If you want to:
 * 👨‍💻 Contribute to the code
 
 then please contact us via the links at: [Author](#author)
-
-
-
 
 
 
@@ -145,6 +163,10 @@ then please contact us via the links at: [Author](#author)
 
 - [refence material for adding photos drom free api into a react app](https://medium.com/@yahtzeemoomtaz/fetch-from-an-api-and-display-some-pictures-react-4de2a027eda7) 
 - [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Fetch from an API and Display Picture](https://medium.com/@yahtzeemoomtaz/fetch-from-an-api-and-display-some-pictures-react-4de2a027eda7) - This was an excellent reference for the first part of our project.
+- [Copy to Clipboard Library](https://www.npmjs.com/package/copy-image-clipboard) - This allowed us to add the copy to clipboard functionality
+- [Git Hub Pages Deployment](https://medium.com/mobile-web-dev/how-to-build-and-deploy-a-react-app-to-github-pages-in-less-than-5-minutes-d6c4ffd30f14) - This article was a good reference on how to deploy our project to GitHub Pages
+- [Mui CSS Framework](https://www.muicss.com/) - We used Mui CSS as our CSS Framework. We used the documentation extensively. 
 
 ## Acknowledgments
 
@@ -154,6 +176,7 @@ Mr Dane Endwards
 Ms Brooke  Love
 Mr Andrew Layendecker
 Mr Noah Camara
+Mr Johnathon Courtney
 
 ## License
 MIT License
@@ -308,6 +331,5 @@ For answers to common questions about this code of conduct, see the FAQ at
 [Mozilla CoC]: https://github.com/mozilla/diversity
 [FAQ]: https://www.contributor-covenant.org/faq
 [translations]: https://www.contributor-covenant.org/translations
+=======
 
-------------------
-------------------
