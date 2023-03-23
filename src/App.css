@@ -11,25 +11,29 @@ h1{
   font-family: 'Cormorant Garamond', Serif;
   margin-left: 3vh !important;
   margin-right: 3vh !important;
+  text-align: center;
+  padding-bottom: 1vh;
+ 
 }
 h2{
-  font-size: 2vw;
+  font-size: 1.5vw;
   color: black;
   font-family: 'Fira Sans', Sans-Serif;
+  text-align: center;
+
 }
 
 
-/*styling for top app bar*/
+/*styling for top app bar text section*/
 .topAppBar{
   text-align: center;
- 
   background-color:#FFFBDB ;
-
   border-radius: 48%;
+  border: #A59132 solid 3px;
+  padding:3vh;
+ 
 }
-/*styling for bottom app bar*/
-.bottomAppBar{
-  text-align: center;
-  
-  background-color:#FFFBDB ;
+/*style for footer area*/
+.footer{
+  background-color: #A59132;
 }
