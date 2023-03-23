@@ -182,6 +182,10 @@ then please contact us via the links at: [Author](#author)
 - [Copy to Clipboard Library](https://www.npmjs.com/package/copy-image-clipboard) - This allowed us to add the copy to clipboard functionality
 - [Git Hub Pages Deployment](https://medium.com/mobile-web-dev/how-to-build-and-deploy-a-react-app-to-github-pages-in-less-than-5-minutes-d6c4ffd30f14) - This article was a good reference on how to deploy our project to GitHub Pages
 - [Mui CSS Framework](https://www.muicss.com/) - We used Mui CSS as our CSS Framework. We used the documentation extensively. 
+css - changing dropdown text color html - Stack Overflow
+html - How to reset ReactJS file input - Stack Overflow
+Object.assign({}, obj) in ReactJs to replace objects of json - Stack Overflow
+
 
 ## Acknowledgments
 
