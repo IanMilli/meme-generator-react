@@ -95,22 +95,20 @@ const downloadImage = async () => {
 
 ### Useful resources
 
-- [Reference material for adding photos from free api into a react app](https://medium.com/@yahtzeemoomtaz/fetch-from-an-api-and-display-some-pictures-react-4de2a027eda7) 
+- [Fetch from an API and Display Picture](https://medium.com/@yahtzeemoomtaz/fetch-from-an-api-and-display-some-pictures-react-4de2a027eda7) - This was an excellent reference for the first part of our project.
 - [Copy to Clipboard Library](https://www.npmjs.com/package/copy-image-clipboard) - This allowed us to add the copy to clipboard functionality
 - [Git Hub Pages Deployment](https://medium.com/mobile-web-dev/how-to-build-and-deploy-a-react-app-to-github-pages-in-less-than-5-minutes-d6c4ffd30f14) - This article was a good reference on how to deploy our project to GitHub Pages
 - [Mui CSS Framework](https://www.muicss.com/) - We used Mui CSS as our CSS Framework. We used the documentation extensively. 
 
 
-## Author
+## Authors
 * Ian Logendra https://github.com/EDX-IL
 * Emmanouil Giavasis https://github.com/manolisgi/
 * Ian Millichamp https://github.com/IanMilli
 
-- Website - [your name or website url](https://www.your-site.com)
-
 
 ## Acknowledgments
 
-We would like to thank, Dane, Andrew, Noah, Brooke,and Jonathan for all their help throughout the course and specifically on this project. Their patience and knowledge were instrumental in our success.  
+- We would like to thank, Dane, Andrew, Noah, Brooke,and Jonathan for all their help throughout the course and specifically on this project. Their patience and knowledge were instrumental in our success.  
 =======
 
